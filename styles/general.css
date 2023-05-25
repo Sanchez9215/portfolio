@@ -29,12 +29,12 @@ body {
   background: var(--primary);
   overflow-x: hidden;
   font-family: "Kanit", sans-serif;
-  line-height: 2.25em;
 }
 
 main {
   margin: 2em 4em;
 }
+
 h1,
 h2,
 h3,
@@ -42,8 +42,9 @@ h4,
 h5,
 h6 {
   color: var(--tertiary);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
+  line-height: 1em;
 }
 
 p,
@@ -52,6 +53,7 @@ li {
   color: var(--tertiary);
   text-transform: uppercase;
   font-weight: 300;
+  line-height: 1.25em;
 }
 
 h1 {
@@ -72,8 +74,16 @@ h5 {
 h6 {
   font-size: 1em;
 }
+/* NAV START****************************************************/
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+}
+/* NAV END****************************************************/
 
-/* button styles---START */
+/* BUTTONS START****************************************************/
 
 button {
   padding: 1em;
@@ -107,9 +117,17 @@ button {
   background: none;
   width: auto;
   font-size: 1em;
-} /* button styles---END */
+}
+/* BUTTONS END****************************************************/
 
-/* mobile styles */
+/* MOBILE STYLES 
+|
+|
+|
+|
+|
+V 
+/* GRIDS START  ***************************************************************************/
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -122,12 +140,9 @@ button {
   gap: 1em;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em 1.5em;
-}
+/* GRIDS END  ***************************************************************************/
+
+/* HOME PAGE START ****************************************************************/
 
 /* PROFILE PIC ****************************************************************/
 .intro #portrait {
@@ -199,6 +214,81 @@ svg {
   margin-left: 0;
   margin-right: 16px;
 }
+/* HOME PAGE END ****************************************************************/
+
+/* RESUME PAGE START ****************************************************************/
+
+#resume section {
+  display: flex;
+  justify-content: center;
+}
+#resume p,
+a,
+li {
+  text-transform: none;
+  font-weight: 200;
+}
+.resume-open-tab {
+  display: flex;
+}
+.resume-open-tab h1 {
+  margin-right: 16px;
+}
+#open-tab {
+  fill: var(--secondary);
+  width: 40%;
+}
+#resume li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+#resume .experience-points li::before {
+  content: "+ ";
+  color: var(--secondary);
+}
+
+#resume .grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 2.5em;
+  column-gap: 1em;
+  max-width: 900px;
+}
+#resume h1,
+h5 {
+  color: var(--secondary);
+}
+
+#resume .resume-header {
+  grid-column: 1 / span 13;
+  grid-row: 1;
+}
+#resume .experience {
+  grid-column: 1 / span 13;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1.5em;
+}
+.company {
+  display: grid;
+  grid-template-columns: subgrid;
+
+  gap: 0.5em;
+}
+
+#resume .university-skills {
+  grid-column: 1 / span 13;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1em;
+}
+
+#resume .company-range {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* MEDIA QUERIES START ****************************************************************/
 
@@ -253,6 +343,9 @@ svg {
   body {
     font-size: 18px;
   }
+  main {
+    margin: 2.5em;
+  }
 
   button {
     padding: 0.5em;
@@ -300,9 +393,7 @@ svg {
   body {
     font-size: 20px;
   }
-  /* main {
-    margin: 02em 4em;
-  } */
+
   button {
     padding: 0.5em;
   }
@@ -341,6 +432,47 @@ svg {
   /* SOCIAL ICONS ****************************************************************/
   #footer-icons {
     display: none;
+  }
+  /* RESUME ****************************************************************/
+  #resume {
+    font-size: 16px !important;
+  }
+
+  #resume .grid {
+    border: 1px solid var(--secondary);
+    padding: 64px;
+    border: 3px solid #bdff00;
+    box-shadow: 16px 16px 0px #bdff00;
+    border-radius: 16px;
+  }
+
+  #resume .experience {
+    grid-column: 1 / 8;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1.5em;
+  }
+  #resume .university-skills {
+    grid-column: 10 /13;
+    grid-row: 2 / auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1em;
+    height: fit-content;
+  }
+  #resume li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+  #resume .company-range {
+    display: block;
+    /* font-size: 1em; */
+    /* justify-content: space-between; */
+  }
+  .company-range h6:nth-child(2) {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 0.5em;
   }
 }
 
@@ -387,12 +519,54 @@ svg {
   #footer-icons {
     display: none;
   }
+  /* RESUME ****************************************************************/
+  #resume {
+    font-size: 16px !important;
+  }
+
+  #resume .grid {
+    border: 1px solid var(--secondary);
+    padding: 64px;
+    border: 3px solid #bdff00;
+    box-shadow: 16px 16px 0px #bdff00;
+    border-radius: 16px;
+  }
+
+  #resume .experience {
+    grid-column: 1 / 8;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1.5em;
+  }
+  #resume .university-skills {
+    grid-column: 10 /13;
+    grid-row: 2 / auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1em;
+    height: fit-content;
+  }
+  #resume li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+  #resume .company-range {
+    display: block;
+    /* font-size: 1em; */
+    /* justify-content: space-between; */
+  }
+  .company-range h6:nth-child(2) {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 0.5em;
+  }
 }
 
 @media (min-width: 1400px) {
   body {
     font-size: 20px;
   }
+
   button {
     padding: 0.5em;
   }
@@ -431,5 +605,47 @@ svg {
   /* SOCIAL ICONS ****************************************************************/
   #footer-icons {
     display: none;
+  }
+  /* RESUME ****************************************************************/
+
+  #resume {
+    font-size: 16px !important;
+  }
+
+  #resume .grid {
+    border: 1px solid var(--secondary);
+    padding: 64px;
+    border: 3px solid #bdff00;
+    box-shadow: 16px 16px 0px #bdff00;
+    border-radius: 16px;
+  }
+
+  #resume .experience {
+    grid-column: 1 / 8;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1.5em;
+  }
+  #resume .university-skills {
+    grid-column: 10 /13;
+    grid-row: 2 / auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1em;
+    height: fit-content;
+  }
+  #resume li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+  #resume .company-range {
+    display: block;
+    /* font-size: 1em; */
+    /* justify-content: space-between; */
+  }
+  .company-range h6:nth-child(2) {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 0.5em;
   }
 }
