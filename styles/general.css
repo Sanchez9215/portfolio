@@ -181,7 +181,7 @@ V
 .experience-buttons form:nth-child(1) {
   grid-column: span 2;
 }
-.experience-buttons form:nth-child(2) {
+.experience-buttons a {
   grid-column: span 2;
 }
 
