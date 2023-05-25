@@ -1,0 +1,13 @@
+p {
+  line-height: 1.25em;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+}
+
+.resume div:nth-child(1) {
+  grid-column: 1 / span 13;
+}
