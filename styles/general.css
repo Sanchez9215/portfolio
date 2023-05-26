@@ -220,6 +220,7 @@ V
   margin-left: 16px;
   border: 3px solid var(--secondary);
   border-radius: 100%;
+  max-width: 46px;
 }
 .icon {
   display: flex;
