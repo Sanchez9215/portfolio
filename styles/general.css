@@ -152,6 +152,11 @@ V
   gap: 1em;
   max-width: 90vw;
 }
+#resume .grid {
+  row-gap: 2.5em;
+  column-gap: 1em;
+  max-width: 90vw;
+}
 
 /* GRIDS END  ***************************************************************************/
 
@@ -266,13 +271,6 @@ li {
   color: var(--secondary);
 }
 
-#resume .grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  row-gap: 2.5em;
-  column-gap: 1em;
-  max-width: 900px;
-}
 #resume h1,
 h5 {
   color: var(--secondary);
@@ -463,6 +461,7 @@ h5 {
     border: 3px solid #bdff00;
     box-shadow: 16px 16px 0px #bdff00;
     border-radius: 16px;
+    max-width: 70vw;
   }
 
   #resume .experience {
@@ -554,6 +553,7 @@ h5 {
     border: 3px solid #bdff00;
     box-shadow: 16px 16px 0px #bdff00;
     border-radius: 16px;
+    max-width: 932px;
   }
 
   #resume .experience {
@@ -649,6 +649,7 @@ h5 {
     border: 3px solid #bdff00;
     box-shadow: 16px 16px 0px #bdff00;
     border-radius: 16px;
+    max-width: 932px;
   }
 
   #resume .experience {
