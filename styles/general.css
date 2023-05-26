@@ -286,12 +286,10 @@ h5 {
   grid-column: 1 / span 13;
   grid-row: 2;
   display: grid;
-  grid-template-columns: subgrid;
   gap: 1.5em;
 }
 .company {
   display: grid;
-  grid-template-columns: subgrid;
 
   gap: 0.5em;
 }
@@ -300,7 +298,6 @@ h5 {
   grid-column: 1 / span 13;
   grid-row: 3;
   display: grid;
-  grid-template-columns: subgrid;
   gap: 1em;
 }
 
@@ -472,14 +469,14 @@ h5 {
     grid-column: 1 / 8;
     grid-row: 2;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1.5em;
   }
   #resume .university-skills {
     grid-column: 10 /13;
     grid-row: 2 / auto;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1em;
     height: fit-content;
   }
@@ -563,14 +560,14 @@ h5 {
     grid-column: 1 / 8;
     grid-row: 2;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1.5em;
   }
   #resume .university-skills {
     grid-column: 10 /13;
     grid-row: 2 / auto;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1em;
     height: fit-content;
   }
@@ -658,14 +655,14 @@ h5 {
     grid-column: 1 / 8;
     grid-row: 2;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1.5em;
   }
   #resume .university-skills {
     grid-column: 10 /13;
     grid-row: 2 / auto;
     display: grid;
-    grid-template-columns: subgrid;
+
     gap: 1em;
     height: fit-content;
   }
