@@ -61,6 +61,11 @@ li {
   line-height: 1.25em;
 }
 
+#company-url {
+  font-weight: 300;
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 2.49em;
 }
