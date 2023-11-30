@@ -1,8 +1,17 @@
 /* variable */
 :root {
-  --primary: #1c2323;
-  --secondary: #bdff00;
-  --tertiary: #f5f7fa;
+  --primary: #000505;
+  --secondary: #808282;
+  --tertiary: #fff;
+  --warning: #e5d528;
+  --gradient: linear-gradient(
+    99deg,
+    #69abfc 37.81%,
+    #4dc1c6 70.79%,
+    #31d891 103.59%
+  );
+  font-size: 14px;
+  line-height: 1.25rem;
 }
 
 /* reset */
@@ -10,6 +19,8 @@
   margin: 0;
   padding: 0;
 }
+
+/* Typography */
 
 body,
 p,
@@ -28,17 +39,17 @@ li {
 body {
   background: var(--primary);
   overflow-x: hidden;
-  font-family: "Kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-section {
+/* section {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
   margin-top: 4vh;
-}
+} */
 
 h1,
 h2,
@@ -47,632 +58,164 @@ h4,
 h5,
 h6 {
   color: var(--tertiary);
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 1em;
+  line-height: 2.71rem;
 }
 
 p,
 a,
 li {
   color: var(--tertiary);
-  text-transform: uppercase;
   font-weight: 300;
-  line-height: 1.25em;
-}
-
-#company-url {
-  font-weight: 300;
-  text-decoration: underline;
 }
 
 h1 {
-  font-size: 2.49em;
+  font-size: 2.2857rem;
+  font-weight: 400;
 }
 h2 {
-  font-size: 2.07em;
+  font-size: 1.7143rem;
+  font-weight: 400;
 }
 h3 {
-  font-size: 1.73em;
+  font-size: 1.2857rem;
+  font-weight: 300;
 }
-h4 {
-  font-size: 1.44em;
-}
-h5 {
-  font-size: 1.2em;
-}
-h6 {
-  font-size: 1em;
-}
-/* NAV START****************************************************/
-.site-nav {
+
+/* Navigation */
+nav {
+  height: 48px;
+  width: 100%;
   display: flex;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 1em 1.5em;
+  background-color: #141414;
+  margin-bottom: 32px;
 }
-
-.nav-name {
-  display: block;
-  width: 100%;
-}
-/* NAV END****************************************************/
-
-/* BUTTONS START****************************************************/
-
-#home #link-button-primary {
-  padding: 1em 0;
-  text-transform: uppercase;
-
-  font-family: inherit;
-  font-size: 1.25em;
-  font-weight: 600;
-  border: none;
-  border: solid 3px var(--tertiary);
-
-  color: var(--primary);
-
-  background-color: var(--tertiary);
-  text-align: center;
-}
-
-#home #link-button-secondary {
-  padding: 1em 0;
-  text-transform: uppercase;
-
-  font-family: inherit;
-  font-size: 1.25em;
-  font-weight: 600;
-  border: solid 3px var(--tertiary);
-  color: var(--tertiary);
-  box-sizing: border-box;
-  background-color: none;
-  text-align: center;
-}
-
-/* BUTTONS END****************************************************/
-
-/* MOBILE STYLES 
-|
-|
-|
-|
-|
-V 
-/* GRIDS START  ***************************************************************************/
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
-  max-width: 90vw;
-}
-#resume .grid {
-  row-gap: 2.5em;
-  column-gap: 1em;
-  max-width: 90vw;
-}
-
-/* GRIDS END  ***************************************************************************/
-
-/* HOME PAGE START ****************************************************************/
-
-/* PROFILE PIC ****************************************************************/
-.intro #portrait {
-  width: 100%;
-  max-width: 230px;
-  height: auto;
-  border-radius: 100%;
-}
-
-.intro div:nth-child(1) {
-  grid-column: 4 / span 6;
-  grid-row: 1;
-  width: 100%;
-  text-align: center;
-}
-/* MAIN STATEMENT ****************************************************************/
-
-.intro div:nth-child(2) {
-  grid-column: 1/13;
-  grid-row: 2;
-  width: 100%;
-}
-
-#statement {
+nav p {
   color: var(--secondary);
 }
 
-/* EXPERIENCE BUTTONS ****************************************************************/
+/* Main Container */
+main {
+  margin: 0 24px 24px 24px;
+}
 
-.intro div:nth-child(3) {
-  grid-column: 1/13;
-  grid-row: 3;
+/* Image and profile */
+
+.imgProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+#portrait {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+  max-width: 40px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 8px;
+  filter: grayscale(100%);
+}
+.profileText {
+  line-height: 1.5rem;
 }
 
-.experience-buttons a:nth-child(1) {
-  grid-column: 1/3;
-  grid-row: 1;
-}
-.experience-buttons a:nth-child(2) {
-  grid-column: 3/5;
-  grid-row: 1;
+.greyText {
+  color: #808282;
 }
 
-/* SOCIAL ICONS ****************************************************************/
+/* Hero Message */
+.heroSection {
+  margin-bottom: 64px;
+}
+#mainText {
+  letter-spacing: 0.02286rem;
+}
+#humanGradient {
+  background: var(
+    --Gradient-1,
+    linear-gradient(99deg, #69abfc 37.81%, #4dc1c6 70.79%, #31d891 103.59%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.links-social-icons {
+/* Case Studies */
+#caseStudyTitle {
+  margin-bottom: 8px;
+}
+
+.caseStudies {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Styles */
+.cardContainer {
+  padding: 24px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 16px;
+  /* background: linear-gradient(
+    180deg,
+    #3059e6 0%,
+    #503bff 24.48%,
+    #1375cf 43.23%,
+    #000 66.15%,
+    #150f42 83.85%,
+    #2a1f85 100%
+  ); */
+}
+.projectTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  margin-bottom: 24px;
+}
+
+video {
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.resultIcon {
+  margin-right: 8px;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1rem;
+  margin-bottom: 8px;
+}
+.noResults {
+  margin-bottom: 0;
+}
+
+/* In Progress */
+
+#progTag {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.icon-wrapper {
-  padding: 8px;
-  margin-left: 16px;
-  border: 3px solid var(--secondary);
-  border-radius: 100%;
-  max-width: 46px;
-}
-.icon {
+
+#warning {
   display: flex;
-  justify-content: center;
-}
-svg {
-  width: 75%;
-
-  fill: var(--tertiary);
-}
-#footer-icons {
-  margin-top: 16px;
-}
-#footer-icon {
-  margin-left: 0;
-  margin-right: 16px;
-}
-/* HOME PAGE END ****************************************************************/
-
-/* RESUME PAGE START ****************************************************************/
-
-#resume section {
-  display: flex;
-  justify-content: center;
   align-items: center;
-}
-#resume p,
-a,
-li {
-  text-transform: none;
-  font-weight: 200;
-}
-.resume-open-tab {
-  display: flex;
-}
-.resume-open-tab h1 {
-  margin-right: 16px;
-}
-#open-tab {
-  fill: var(--secondary);
-  width: 40%;
-}
-#resume li:not(:last-child) {
-  margin-bottom: 1em;
-}
-
-#resume .experience-points li::before {
-  content: "+ ";
-  color: var(--secondary);
-}
-
-#resume h1,
-h5 {
-  color: var(--secondary);
-}
-
-#resume .resume-header {
-  grid-column: 1 / span 13;
-  grid-row: 1;
-}
-#resume .experience {
-  grid-column: 1 / span 13;
-  grid-row: 2;
-  display: grid;
-  gap: 1.5em;
-}
-.company {
-  display: grid;
-
-  gap: 0.5em;
-}
-
-#resume .university-skills {
-  grid-column: 1 / span 13;
-  grid-row: 3;
-  display: grid;
-  gap: 1em;
-}
-
-#resume .company-range {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* MEDIA QUERIES START ****************************************************************/
-
-@media (max-width: 376px) {
-  body {
-    font-size: 14px;
-    margin: 0;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-
-  #top-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 377px) and (max-width: 576px) {
-  /* Styles for medium devices */
-  body {
-    font-size: 16px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 767px) {
-  body {
-    font-size: 16px;
-    margin: 0;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-
-  #footer-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  /* Styles for large devices */
-  body {
-    font-size: 18px;
-  }
-
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
-  }
-
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1/5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-  /* Styles for extra large devices */
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
-  }
-
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1/5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 70vw;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
-  }
-}
-
-@media (min-width: 1201px) and (max-width: 1399px) {
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
-  }
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1 / 5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 932px;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
-  }
-}
-
-@media (min-width: 1400px) {
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-
-  .grid {
-    column-gap: 1.5em;
-  }
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 4/6;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 6/10;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 6/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 932px;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
-  }
+  background-color: var(--warning);
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+  height: 12px;
+  line-height: 12px;
 }
