@@ -78,7 +78,7 @@ h2 {
 }
 h3 {
   font-size: 1.2857rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 /* Navigation */
@@ -119,6 +119,7 @@ main {
 }
 .profileText {
   line-height: 1.5rem;
+  font-weight: 300;
 }
 
 .greyText {
@@ -126,11 +127,15 @@ main {
 }
 
 /* Hero Message */
+.hero {
+}
 .heroSection {
   margin-bottom: 64px;
 }
+
 #mainText {
   letter-spacing: 0.02286rem;
+  margin-bottom: 8px;
 }
 #humanGradient {
   background: var(
@@ -185,6 +190,11 @@ video {
   margin-bottom: 24px;
 }
 
+#marketingImage {
+  width: 100%;
+  height: auto;
+}
+
 .resultIcon {
   margin-right: 8px;
 }
@@ -218,4 +228,14 @@ video {
   margin-left: 8px;
   height: 12px;
   line-height: 12px;
+}
+
+/* Media Queries Start */
+@media (max-width: 4px) {
+  main {
+    margin: 6.6%;
+  }
+  img {
+    width: 100%;
+  }
 }
