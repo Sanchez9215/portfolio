@@ -10,8 +10,8 @@
     #4dc1c6 70.79%,
     #31d891 103.59%
   );
-  font-size: 14px;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* reset */
@@ -58,7 +58,7 @@ h4,
 h5,
 h6 {
   color: var(--tertiary);
-  line-height: 2.71rem;
+  line-height: 1.2;
 }
 
 p,
@@ -69,21 +69,21 @@ li {
 }
 
 h1 {
-  font-size: 2.2857rem;
+  font-size: 4rem;
   font-weight: 400;
 }
 h2 {
-  font-size: 1.7143rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 h3 {
-  font-size: 1.2857rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 /* Navigation */
 nav {
-  height: 48px;
+  height: 72px;
   width: 100%;
   display: flex;
   text-align: center;
@@ -98,7 +98,7 @@ nav p {
 
 /* Main Container */
 main {
-  margin: 0 24px 24px 24px;
+  margin: 4%;
 }
 
 /* Image and profile */
@@ -107,18 +107,18 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
 #portrait {
   width: 100%;
-  max-width: 40px;
+  max-width: 72px;
   height: auto;
   border-radius: 8px;
-  margin-right: 8px;
+  margin-right: 16px;
   filter: grayscale(100%);
 }
 .profileText {
-  line-height: 1.5rem;
+  line-height: 1.2;
   font-weight: 300;
 }
 
@@ -128,14 +128,14 @@ main {
 
 /* Hero Message */
 .hero {
-}
-.heroSection {
-  margin-bottom: 64px;
+  display: none;
+  width: 75%;
+  margin-bottom: 16%;
 }
 
 #mainText {
   letter-spacing: 0.02286rem;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 #humanGradient {
   background: var(
@@ -147,6 +147,8 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+/* GRID EXERCISE _____________________________________________________________________*/
+
 /* Case Studies */
 #caseStudyTitle {
   margin-bottom: 8px;
@@ -155,42 +157,50 @@ main {
 .caseStudies {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 /* Card Styles */
 .cardContainer {
-  padding: 24px 16px;
+  display: grid;
+  gap: 1.5rem;
+  /* grid-template-columns: repeat(2, 1fr); */
+
+  padding: 16px 16px 16px 16px;
   border: 1px solid var(--secondary);
   border-radius: 16px;
-  /* background: linear-gradient(
-    180deg,
-    #3059e6 0%,
-    #503bff 24.48%,
-    #1375cf 43.23%,
-    #000 66.15%,
-    #150f42 83.85%,
-    #2a1f85 100%
-  ); */
 }
+
 .projectTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+
+  /* margin-bottom: 24px; */
 }
 
-.cardDescription {
-  margin-bottom: 24px;
-}
-
-video {
+.imageContent {
   border-radius: 8px;
-  margin-bottom: 24px;
+  width: 100%;
+  height: 100%;
 }
+
+/* video {
+  border-radius: 8px;
+  width: 100%;
+} */
 
 #marketingImage {
+  /* width: 100%;
+  height: auto; */
+}
+
+.imgWrapper {
+  width: 100%;
+  aspect-ratio: auto 16/9;
+}
+.projPreview {
   width: 100%;
   height: auto;
 }
@@ -203,7 +213,7 @@ video {
   display: flex;
   flex-direction: row;
   align-items: center;
-  line-height: 1rem;
+  line-height: 1.2r;
   margin-bottom: 8px;
 }
 .noResults {
@@ -230,60 +240,123 @@ video {
   line-height: 12px;
 }
 
-/* Media Queries Start */
-@media (min-width: 481px) {
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--tertiary);
+/* Media Query Starts */
+@media (min-width: 604px) {
+  .cardContainer {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px 16px;
+    border: 1px solid var(--secondary);
+    border-radius: 16px;
   }
-
-  p,
-  a,
-  li {
-    color: var(--tertiary);
-    font-weight: 300;
+  .projectTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 2;
   }
-
-  h1 {
-    font-size: 3.42rem;
-    font-weight: 400;
-    line-height: 1.02;
-  }
-  h2 {
-    font-size: 2.29rem;
-    font-weight: 400;
-  }
-  h3 {
-    font-size: 1.71rem;
-    font-weight: 500; */
-    }
-  main {
-    margin: 6.6%;
-  }
-  nav {
-    height: 64px;
-  }
-  #portrait {
+  .imgWrapper {
     width: 100%;
-    max-width: 64px;
+    aspect-ratio: auto 16/9;
+    grid-column: span 2;
+  }
+  .projPreview {
+    width: 100%;
     height: auto;
+  }
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+}
+@media (min-width: 724px) {
+  .cardContainer {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(8, 1fr);
+
+    padding: 24px 16px 16px 16px;
+    border: 1px solid var(--secondary);
+    border-radius: 16px;
+    max-height: 400px;
+  }
+  .projectTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 8;
+  }
+  .description {
+    grid-column: span 3;
+  }
+  .imgWrapper {
+    width: 100%;
+    aspect-ratio: auto 16/9;
+    grid-column: span 2;
+  }
+  .projPreview {
+    width: 100%;
+    height: auto;
+  }
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column: span 3;
+    padding-bottom: 16px;
+  }
+  .imageContent {
+    grid-row: span 2;
+    grid-column: span 5;
     border-radius: 8px;
-    margin-right: 16px;
-    filter: grayscale(100%);
+    width: 100%;
+    height: auto;
+    max-width: 690px;
   }
-  .profileText {
-    line-height: 1.2;
-    font-weight: 300;
-  }
-  .imgProfile {
-    margin-bottom: 64px;
-  }
-  .heroSection {
-    margin-bottom: 96px;
+  @media (min-width: 900px) {
+    .cardContainer {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(3, auto);
+      padding: 24px 16px 16px 16px;
+      border: 1px solid var(--secondary);
+      border-radius: 16px;
+      max-height: 400px;
+    }
+    .projectTitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      grid-column: span 12;
+    }
+    .description {
+      grid-column: span 6;
+    }
+
+    /* .imageContent {
+      grid-column: span 6;
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      height: 100%;
+      grid-row: span 2;
+    } */
+    .results {
+      grid-column-start: 2;
+      grid-row-start: 3;
+      grid-column: span 6;
+      padding-bottom: 16px;
+    }
+    .imageContent {
+      grid-row: span 2;
+      grid-column: span 6;
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+    }
   }
 }
