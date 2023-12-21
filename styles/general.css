@@ -73,17 +73,29 @@ h3 {
 }
 
 /* Navigation */
-nav {
+#nav {
   height: 72px;
-  width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: #141414;
+  padding: 0 4% 0 4%;
+  gap: 24px;
 }
-nav p {
-  color: var(--secondary);
+#links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.emailLink {
+  padding-top: 4px;
+}
+#socialLink {
+  fill: blue;
+}
+.siteName {
+  display: none;
 }
 
 /* Main Container */
