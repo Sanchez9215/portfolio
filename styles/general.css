@@ -74,37 +74,41 @@ h3 {
 
 /* Navigation */
 #nav {
-  height: 72px;
+  height: 64px;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding: 0 4% 0 4%;
   gap: 24px;
+  border-bottom: #808282 1px solid;
+  border-radius: 0 0 16px 16px;
 }
 #links {
   display: flex;
   align-items: center;
   gap: 32px;
 }
+#link {
+  font-size: 16px;
+  font-weight: 400;
+}
 
 .emailLink {
-  padding-top: 4px;
+  padding-top: 6px;
 }
-#socialLink {
-  fill: blue;
-}
+
 .siteName {
   display: none;
 }
 
 /* Main Container */
 .main-container {
-  margin: 8% 4%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 18% 6%;
 }
 
 /* Image and profile */
@@ -165,7 +169,7 @@ h3 {
   display: flex;
   max-width: 1104px;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
 }
 
 /* Card Styles */
@@ -237,6 +241,30 @@ h3 {
   font-weight: 500;
 }
 
+#footer {
+  height: 240px;
+  padding: 0 4% 0 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--secondary);
+}
+.copycontents {
+  margin-bottom: 16px;
+}
+
+#copyText {
+  color: var(--secondary);
+}
+.footerText {
+  text-align: center;
+}
+.footerIcons {
+  text-align: center;
+  margin-top: 8px;
+}
+
 /* Media Query Starts */
 @media (min-width: 360px) {
   h1 {
@@ -254,6 +282,26 @@ h3 {
 }
 
 @media (min-width: 604px) {
+  #nav {
+    justify-content: space-between;
+  }
+  #links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  #link {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .emailLink {
+    padding-top: 6px;
+  }
+
+  .siteName {
+    display: block;
+  }
   #mainText {
     max-width: 80%;
   }
@@ -295,6 +343,10 @@ h3 {
   }
 }
 @media (min-width: 900px) {
+  .main-container {
+    margin: 12% 4%;
+  }
+
   #mainText {
     max-width: 70%;
   }
