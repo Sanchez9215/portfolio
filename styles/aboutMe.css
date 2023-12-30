@@ -1,18 +1,18 @@
 .aboutMeImgWrapper {
   width: 100%;
+  margin-bottom: 64px;
 }
 .aboutMeImg {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
 }
 
-.aboutMeImgWrapper {
-  margin-bottom: 64px;
-}
 .aboutLargeText {
   margin-bottom: 64px;
+  max-width: 1104px;
+  width: 100%;
 }
 
 .aboutMeContent {
@@ -29,6 +29,18 @@
   margin-bottom: 64px;
 }
 
+#muralLink {
+  text-decoration: underline;
+}
+
+.philSection {
+  display: flex;
+  max-width: 1104px;
+  margin-bottom: 64px;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .philCard {
   gap: 1.5rem;
   padding: 24px 16px 16px;
@@ -37,4 +49,59 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.cardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.photoGallery {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.photoGallery img {
+  width: 100%;
+}
+
+@media (min-width: 604px) {
+  .photoGallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1104px;
+  }
+  .photoGallery :nth-child(1) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 724px) {
+  .aboutTopGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 64px;
+    max-width: 1104px;
+  }
+
+  .aboutLargeText {
+    grid-row-start: 1;
+  }
+  .aboutMeImgWrapper {
+    margin-bottom: 0;
+    grid-row: span 2;
+  }
+  .aboutMeImg {
+    height: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .cardGroup {
+    flex-direction: row;
+  }
+  .philCard {
+    width: 100%;
+  }
 }
