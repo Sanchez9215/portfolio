@@ -11,14 +11,14 @@ const navSlide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navlinkFade 0.5s ease forwards ${
-          index / 6 + 1
+        link.style.animation = `navlinkFade 0.25s ease forwards ${
+          index / 4 + 0.35
         }s`;
       }
     });
 
     // toggle
-    burger.classList.toggle(".toggle");
+    burger.classList.toggle("toggle");
   });
 };
 navSlide();

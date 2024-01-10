@@ -60,6 +60,9 @@
 .photoGallery {
   border-radius: 16px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .photoGallery img {
   width: 100%;
