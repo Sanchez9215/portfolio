@@ -38,9 +38,6 @@ li {
   padding: 0;
   text-decoration: none;
 }
-li {
-  list-style-type: none;
-}
 
 /* base styles */
 body {
@@ -66,6 +63,10 @@ li {
   font-weight: 300;
 }
 
+li {
+  list-style: outside;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 400;
@@ -76,12 +77,16 @@ h2 {
 }
 h3 {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Navigation */
 .largeLinks {
   display: none;
+}
+
+video {
+  border-radius: 8px;
 }
 
 nav {
@@ -184,10 +189,6 @@ nav {
   width: 64px;
   z-index: -1;
 }
-.profileText {
-  line-height: 1.2;
-  font-weight: 300;
-}
 
 .greyText {
   color: #808282;
@@ -204,6 +205,12 @@ nav {
   letter-spacing: 0.02286rem;
   margin-bottom: 16px;
 }
+
+.profileText {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 #humanGradient {
   background: var(
     --Gradient-1,
@@ -262,6 +269,10 @@ nav {
   border-radius: 8px;
 }
 
+.homeResultList {
+  list-style-type: none;
+}
+
 .resultIcon {
   margin-right: 8px;
 }
@@ -270,7 +281,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  line-height: 1.2r;
+  line-height: 1.2;
   margin-bottom: 8px;
 }
 
@@ -328,15 +339,7 @@ nav {
   justify-content: center;
   gap: 16px;
 }
-iframe {
-  width: 100%;
-  height: inherit;
-}
 
-.caseStudyContent {
-  height: 100vh;
-  width: 100%;
-}
 /* Media Query Starts */
 @media (min-width: 360px) {
   h1 {
@@ -401,6 +404,9 @@ iframe {
   .largeLinks li a {
     font-size: 14px;
     font-weight: 400;
+  }
+  .largeLinks li {
+    list-style: none;
   }
 
   .navLinks {
