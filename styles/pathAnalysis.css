@@ -1,10 +1,8 @@
-/* .caseStudyContent{
-  display: flex;
-  flex-direction: column;
-  gap: ;
-} */
+.caseStudyContent {
+  max-width: 1104px;
+}
 .caseStudyHero {
-  margin-bottom: 64px;
+  margin-bottom: 7.5rem;
 }
 .caseStudyTitleDescription {
   margin-bottom: 32px;
@@ -48,11 +46,35 @@ img {
   gap: 16px;
 }
 
+.basicCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.oppCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#auditCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .caseSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 7.5rem;
+}
+#aboutSec {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 7.5rem;
 }
 
 .inCaseImg {
@@ -60,13 +82,24 @@ img {
 }
 
 .projectDetails {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roleDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.singleDetail {
+  width: 100%;
 }
 
 .singleDetail ul li {
   list-style: none;
+  font-size: 0.86rem;
 }
 
 #components li {
@@ -101,7 +134,7 @@ img {
 }
 
 .compScreenShots {
-  margin: 16px 0px;
+  margin: 16px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -148,4 +181,63 @@ img {
 
 .finalQueryVid {
   width: 100%;
+}
+
+#bottomResults {
+  margin-top: 16px;
+}
+
+@media (min-width: 604px) {
+  .heroResults {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projectDetails {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auditCardGroup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .auditCardGroup :nth-child(1) {
+    grid-column: span 2;
+  }
+  .auditCardGroup :nth-child(2) {
+    grid-column: span 2;
+  }
+  .auditCardGroup :nth-child(3) {
+    grid-column: span 4;
+  }
+
+  #opportunitySection {
+    display: flex;
+  }
+}
+@media (min-width: 900px) {
+  #aboutSec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 16px;
+    grid-row-start: 3;
+    grid-column: span 2;
+  }
+
+  #aboutSec :nth-child(2) {
+    grid-row-start: 2;
+    grid-column: span 2;
+  }
+  #aboutSec :nth-child(4) {
+    grid-row-start: 3;
+    grid-column: span 2;
+  }
+  #aboutSec :nth-child(3) {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
 }
