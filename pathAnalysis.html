@@ -246,7 +246,7 @@
               As Auryc scaled, path analysis became a highly sought-after
               feature from our customers and leads.
             </p>
-            <div class="cardGroup">
+            <div class="cardGroup marginTopcardGroup">
               <div class="iconCard">
                 <div>
                   <object data="assets/SVG/money_off.svg" type=""></object>
@@ -266,7 +266,7 @@
               </div>
             </div>
           </div>
-          <div class="caseSection">
+          <div class="caseSection marginTopcardGroup">
             <h2>Opportunity</h2>
             <p>
               How can we provide a more intuitive & differentiated path analysis
@@ -326,7 +326,7 @@
               <div class="basicCard">
                 <h3>Types of Analysis</h3>
 
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>Inbound</li>
                   <li>Outbound</li>
                   <li>End-to-End</li>
@@ -335,7 +335,7 @@
               <div class="basicCard">
                 <h3>Key Findings</h3>
 
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>
                     Creating and editing charts required technical expertise or
                     support.
@@ -354,7 +354,10 @@
               Right away, we could see some clear goals to set for each
               component.
             </p>
-            <div class="cardGroup" id="remainStackedCardGroup">
+            <div
+              class="cardGroup marginTopcardGroup"
+              id="remainStackedCardGroup"
+            >
               <div class="basicCard">
                 <h3>Easy</h3>
 
@@ -402,7 +405,10 @@
               calls in order to collect customer pain points with path analysis
               and validate my audit findings.
             </p>
-            <div class="cardGroup" id="remainStackedCardGroup">
+            <div
+              class="cardGroup marginTopcardGroup"
+              id="remainStackedCardGroup"
+            >
               <div class="basicCard">
                 <h3>
                   The overwhelming visualization of user paths made it hard to
@@ -505,7 +511,7 @@
               <div class="basicCard">
                 <h3>Opportunities</h3>
 
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>Limited data in tooltips.</li>
                   <li>Session replays separate from chart.</li>
                   <li>Few supported raw click events and event definition.</li>
@@ -515,7 +521,7 @@
               <div class="basicCard">
                 <h3>Best Practices</h3>
 
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>
                     Sankey diagrams are the most effective way to display user
                     paths.
@@ -534,10 +540,12 @@
               down into two phases.
             </p>
 
-            <img
-              src="assets/PathAnalysisCaseStudyImgs/Research Synth.jpg"
-              alt=""
-            />
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/PathAnalysisCaseStudyImgs/Research Synth.jpg"
+                alt=""
+              />
+            </div>
 
             <div class="cardGroup">
               <div class="basicCard">
@@ -547,7 +555,7 @@
                 </h3>
 
                 <p>Read-only inbound, outbound, and end-to-end charts.</p>
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>Allow users to handle noisy data.</li>
                   <li>Only supports defined events.</li>
                 </ul>
@@ -559,7 +567,7 @@
                 </h3>
 
                 <p>Path Analysis with Auryc’s existing features.</p>
-                <ul class="analysisTypes">
+                <ul class="listItemPadding">
                   <li>Tool-tips with supporting metrics</li>
                   <li>Session replay</li>
                   <li>Event definition</li>
@@ -576,29 +584,53 @@
             </p>
 
             <div class="version-ImageCardGroup">
-            
               <div class="labelAndDesign">
-                
+                <p id="version">V1</p>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/QBuilderV1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="basicCard" id="basicCardVMargin">
+                <h3>Pros</h3>
+
+                <p>
+                  Easiest to implement because it followed current method of
+                  building queries.
+                </p>
+                <div class="divider"></div>
+
+                <h3>Cons</h3>
+
+                <p>Query was not easy to read and understand.</p>
+              </div>
+            </div>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <p id="version">V2</p>
+                <div id="imageVideoExtraHeight">
                   <img
-                    src="assets/PathAnalysisCaseStudyImgs/QBuilderV1.jpg"
+                    src="assets/PathAnalysisCaseStudyImgs/QBuilderV2.jpg"
                     alt=""
                   />
-              </div>
-                <div class="basicCard">
-                  <h3>Pros</h3>
-  
-                  <p>
-                    Easiest to implement because it followed current method of
-                    building queries.
-                  </p>
-                  <div class="divider"></div>
-  
-                  <h3>Cons</h3>
-  
-                  <p>Query was not easy to read and understand.</p>
                 </div>
               </div>
-              
+              <div class="basicCard" id="basicCardVMargin">
+                <h3>Pros</h3>
+
+                <p>
+                  Avoided technical terms making copy accessible and allowed for
+                  quick switch in analysis direction.
+                </p>
+                <div class="divider"></div>
+
+                <h3>Cons</h3>
+
+                <p>
+                  During testing users often missed the “Include” option due to
+                  its placement.
+                </p>
+              </div>
             </div>
           </div>
           <div class="caseSection">
@@ -611,8 +643,44 @@
               effort estimate . The team saw the value in the flexibility it
               would provide and considered it low effort.
             </p>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <div class="zoomVideoClip" id="imageVideoExtraHeight">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    id="QueryBuilderVidZoom"
+                    src="assets/Vid/FINAL QUERY.m4v"
+                  ></video>
+                </div>
+              </div>
+              <div class="basicCard">
+                <h3>Pros</h3>
 
-            <video
+                <p>
+                  Exposed analysis options improved discoverability and made it
+                  easy for users to switch between analysis types.
+                </p>
+                <p>
+                  Grouping all options specific to path analysis into a single
+                  section ensured users didn’t miss any options before moving
+                  onto the next set of parameters.
+                </p>
+                <div class="divider"></div>
+
+                <h3>Cons</h3>
+
+                <p>
+                  Analysis terms could caused confusion to users that were not
+                  familiar with them. After launch we decided to include a small
+                  info icon that provided users with definitions and analysis
+                  examples.
+                </p>
+              </div>
+            </div>
+
+            <!-- <video
               class="finalQueryVid iterationImg"
               autoplay
               muted
@@ -641,7 +709,7 @@
                 info icon that provided users with definitions and analysis
                 examples.
               </p>
-            </div>
+            </div> -->
           </div>
           <div class="caseSection">
             <h2>Sankey Chart Design</h2>
@@ -694,79 +762,75 @@
               alt=""
             />
           </div>
-          <div class="QueryBuilderSection">
+          <div class="caseSection">
             <h2>Excluding Events</h2>
             <p>
               I proposed 2 methods to exclude events from the chart: using the
               control bar or excluding from the chart itself. Due to the time
               crunch excluding events from the chart was pushed to phase 2.
             </p>
-            <div>
-              <div class="completeVersionSection">
-                <div>
-                  <div class="designVersion"><p id="version">Method 1</p></div>
-                  <div class="queryVersionImg">
-                    <video
-                      autoplay
-                      muted
-                      loop
-                      src="assets/Vid/EXCLUDEV1.m4v"
-                    ></video>
-                  </div>
-                </div>
-                <div class="basicCard">
-                  <h3>Excluding from Toolbar</h3>
-
-                  <p>
-                    The main way to exclude events would be via the control bar
-                    where it would remain visible for users who already have in
-                    mind the events they want to exclude.
-                  </p>
-                </div>
-              </div>
-              <div class="completeVersionSection">
-                <div>
-                  <div class="designVersion"><p id="version">Method 2</p></div>
-                  <div class="queryVersionImg">
-                    <video
-                      autoplay
-                      muted
-                      loop
-                      src="assets/Vid/ExcludeV2.m4v"
-                    ></video>
-                  </div>
-                </div>
-                <div class="basicCard">
-                  <h3>Excluding from Chart</h3>
-
-                  <p>
-                    The ability to exclude events from the chart itself is meant
-                    to reduce user effort by allowing them to exclude events on
-                    the spot without interrupting their analysis.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="phase1Section">
-            <h2>Laying the Foundation</h2>
-            <div class="completeVersionSection">
-              <div>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <p id="version">Method 1</p>
                 <video
                   autoplay
                   muted
                   loop
-                  src="assets/Vid/ExcludeV2.m4v"
+                  src="assets/Vid/EXCLUDEV1.m4v"
+                ></video>
+              </div>
+              <div class="basicCard" id="basicCardVMargin">
+                <h3>Excluding from Toolbar</h3>
+
+                <p>
+                  Easiest to implement because it followed current method of
+                  building queries.
+                </p>
+              </div>
+            </div>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <p id="version">Method 2</p>
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/EXCLUDEV1.m4v"
+                ></video>
+              </div>
+              <div class="basicCard" id="basicCardVMargin">
+                <h3>Excluding from Chart</h3>
+
+                <p>
+                  The ability to exclude events from the chart itself is meant
+                  to reduce user effort by allowing them to exclude events on
+                  the spot without interrupting their analysis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Laying the Foundation</h2>
+
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/PHASE1FINAL.m4v"
                 ></video>
               </div>
               <div class="basicCard">
-                <h3>Opportunities</h3>
+                <h3>Phase 1</h3>
 
-                <ul class="analysisTypes">
-                  <li>Limited data in tooltips.</li>
-                  <li>Session replays separate from chart.</li>
-                  <li>Few supported raw click events and event definition.</li>
-                  <li>Few competitors surfaced frustration.</li>
+                <ul class="listItemPadding">
+                  <li>Inbound (Read only)</li>
+                  <li>Outbound(Read only)</li>
+                  <li>End-to-End (Read only)</li>
+                  <li>Event Exclusion</li>
+                  <li>Collapsed repeated paths/events</li>
+                  <li>Only supports defined events</li>
                 </ul>
               </div>
             </div>
@@ -774,29 +838,26 @@
           <div class="caseSection">
             <h2>Integrating Strengths</h2>
 
-            <div class="completeVersionSection">
-              <div class="iterationImg">
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
                 <video
-                  class="finalQueryVid"
                   autoplay
                   muted
                   loop
-                  src="assets/Vid/pathAnalysisChart(compressed).mp4"
+                  src="assets/Vid/PHASE2FINAL.mp4"
                 ></video>
               </div>
-              <div class="cardGroup">
-                <div class="basicCard">
-                  <h3>Phase 2</h3>
+              <div class="basicCard">
+                <h3>Phase 2</h3>
 
-                  <ul class="analysisTypes">
-                    <li>Tooltips with supporting metrics</li>
-                    <li>Frustration events</li>
-                    <li>Surfacing of site and JS errors</li>
-                    <li>Path insights access</li>
-                    <li>Session replay access</li>
-                    <li>Event definition access</li>
-                  </ul>
-                </div>
+                <ul class="listItemPadding">
+                  <li>Tooltips with supporting metrics</li>
+                  <li>Frustration events</li>
+                  <li>Surfacing of site and JS errors</li>
+                  <li>Path insights access</li>
+                  <li>Session replay</li>
+                  <li>Event definition access</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -820,7 +881,7 @@
           <div class="caseSection">
             <h2>Results</h2>
 
-            <div class="cardGroup" id="resultGroup">
+            <div class="cardGroup marginTopcardGroup" id="resultGroup">
               <div class="iconCard">
                 <div>
                   <object data="assets/SVG/attach_money.svg" type=""></object>
