@@ -3,7 +3,9 @@
   <head>
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/pathAnalysis.css" />
-    <link rel="stylesheet" href="styles/aboutMe.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+
+    <!-- <link rel="stylesheet" href="styles/aboutMe.css" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -164,34 +166,34 @@
                 ></video>
               </div>
             </div>
-            <div class="heroResults">
-              <div class="resultCard">
-                <div class="philTitle">
+            <div class="cardGroup" id="resultGroup">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/attach_money.svg" type=""></object>
                 </div>
                 <p>ARR increase of 20% from previous quarter.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/people_alt.svg" type=""></object>
                 </div>
                 <p>Adopted by 78% of accounts.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/article.svg" type=""></object>
                 </div>
                 <p>Expansion rate of 15% on overall contract value.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/insights.svg" type=""></object>
                 </div>
                 <p>Increased retention rate to 92%.</p>
               </div>
             </div>
           </div>
-          <div id="aboutSec">
+          <div class="aboutSection">
             <h2>About</h2>
             <p>
               Auryc is a product analytics platform that helps product teams
@@ -199,44 +201,42 @@
               improvements. It offers session replay, analytics, and voice of
               customer feedback.
             </p>
-            <img
-              class="inCaseImg"
-              src="assets/PathAnalysisCaseStudyImgs/aboutImg.png"
-              alt=""
-            />
+            <div class="imgWrapper-topMargin">
+              <img
+                id="aboutImg"
+                src="assets/PathAnalysisCaseStudyImgs/aboutImg.png"
+                alt=""
+              />
+            </div>
             <div class="projectDetails">
-              <div class="roleDetails">
-                <div class="singleDetail">
-                  <h4>Role</h4>
-                  <ul>
-                    <li>Lead product designer</li>
-                  </ul>
-                </div>
-                <div class="singleDetail">
-                  <h4>Timeline</h4>
-                  <ul>
-                    <li>Q3-Q4 2021</li>
-                  </ul>
-                </div>
+              <div class="singleDetail">
+                <h4>Role</h4>
+                <ul>
+                  <li>Lead product designer</li>
+                </ul>
               </div>
-              <div class="roleDetails">
-                <div class="singleDetail">
-                  <h4>Contribution</h4>
-                  <ul>
-                    <li>Research</li>
-                    <li>Scoping & prioritization</li>
-                    <li>Design</li>
-                    <li>QA</li>
-                  </ul>
-                </div>
-                <div class="singleDetail">
-                  <h4>Team</h4>
-                  <ul>
-                    <li>1 Product manager</li>
-                    <li>2 Developers</li>
-                    <li>1 Backend engineer</li>
-                  </ul>
-                </div>
+              <div class="singleDetail">
+                <h4>Timeline</h4>
+                <ul>
+                  <li>Q3-Q4 2021</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Contribution</h4>
+                <ul>
+                  <li>Research</li>
+                  <li>Scoping & prioritization</li>
+                  <li>Design</li>
+                  <li>QA</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Team</h4>
+                <ul>
+                  <li>1 Product manager</li>
+                  <li>2 Developers</li>
+                  <li>1 Backend engineer</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -246,9 +246,9 @@
               As Auryc scaled, path analysis became a highly sought-after
               feature from our customers and leads.
             </p>
-            <div class="heroResults">
-              <div class="resultCard">
-                <div class="philTitle">
+            <div class="cardGroup">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/money_off.svg" type=""></object>
                 </div>
                 <p>
@@ -256,8 +256,8 @@
                   customers.
                 </p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/thumb_down_alt.svg" type=""></object>
                 </div>
                 <p>
@@ -272,21 +272,18 @@
               How can we provide a more intuitive & differentiated path analysis
               experience?
             </p>
-            <div class="heroResults">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>More Control</h3>
-                </div>
+            <div class="cardGroup">
+              <div class="basicCard">
+                <h3>More Control</h3>
                 <p>
                   Building a native tool gives us control over tool behavior and
                   look allowing us to improve UX through flow optimization and
                   design consistency.
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>More Value</h3>
-                </div>
+              <div class="basicCard">
+                <h3>More Value</h3>
+
                 <p>
                   Integrating session replay, behavioral analytics, and feedback
                   data will provide users a more complete understanding of the
@@ -295,23 +292,23 @@
               </div>
             </div>
           </div>
-          <div class="caseSection">
+          <div class="auditCaseSection">
             <h2>What are we working with?</h2>
             <p>
               I conducted an audit of our current path analysis tool to gain a
               better understanding of how it works and how we can improve the
               user experience.
             </p>
-            <img
-              class="inCaseImg"
-              src="assets/PathAnalysisCaseStudyImgs/BeforePathImage.png"
-              alt=""
-            />
-            <div class="auditCardGroup">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Components</h3>
-                </div>
+            <div class="imgWrapper-topMargin" id="auditImg">
+              <img
+                src="assets/PathAnalysisCaseStudyImgs/BeforePathImage.png"
+                alt=""
+              />
+            </div>
+            <div class="cardGroup" id="auditCardGroup">
+              <div class="basicCard">
+                <h3>Components</h3>
+
                 <ul id="components">
                   <li>
                     <object data="assets/SVG/1.svg" type=""></object>Query
@@ -326,20 +323,18 @@
                   </li>
                 </ul>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Types of Analysis</h3>
-                </div>
+              <div class="basicCard">
+                <h3>Types of Analysis</h3>
+
                 <ul class="analysisTypes">
                   <li>Inbound</li>
                   <li>Outbound</li>
                   <li>End-to-End</li>
                 </ul>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Key Findings</h3>
-                </div>
+              <div class="basicCard">
+                <h3>Key Findings</h3>
+
                 <ul class="analysisTypes">
                   <li>
                     Creating and editing charts required technical expertise or
@@ -359,11 +354,10 @@
               Right away, we could see some clear goals to set for each
               component.
             </p>
-            <div class="basicCardGroup">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Easy</h3>
-                </div>
+            <div class="cardGroup" id="remainStackedCardGroup">
+              <div class="basicCard">
+                <h3>Easy</h3>
+
                 <p>
                   It should be easy for users to create the three types of path
                   analysis charts we offer via Looker.
@@ -373,10 +367,9 @@
                   background.
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Insightful</h3>
-                </div>
+              <div class="basicCard">
+                <h3>Insightful</h3>
+
                 <p>
                   Tooltips can lead to more path context than only the traffic
                   count.
@@ -387,10 +380,9 @@
                   bring more value to our users?
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Clear</h3>
-                </div>
+              <div class="basicCard">
+                <h3>Clear</h3>
+
                 <p>
                   Event names and paths should always be legible,
                   distinguishable at a glance, and hint at their interactivity.
@@ -410,15 +402,14 @@
               calls in order to collect customer pain points with path analysis
               and validate my audit findings.
             </p>
-            <div class="basicCardGroup">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    The overwhelming visualization of user paths made it hard to
-                    find valuable insights.
-                  </h3>
-                </div>
-                <p>
+            <div class="cardGroup" id="remainStackedCardGroup">
+              <div class="basicCard">
+                <h3>
+                  The overwhelming visualization of user paths made it hard to
+                  find valuable insights.
+                </h3>
+
+                <p class="caseQuote">
                   <i>
                     “I’d like to see the path analysis feature be easier to use
                     , less cluttered. It would be nice to filter the results by
@@ -426,14 +417,13 @@
                   </i>
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    Session replay access from paths would help users identify
-                    and fix bugs and usability issues more effectively.
-                  </h3>
-                </div>
-                <p>
+              <div class="basicCard">
+                <h3>
+                  Session replay access from paths would help users identify and
+                  fix bugs and usability issues more effectively.
+                </h3>
+
+                <p class="caseQuote">
                   <i>
                     “ ...it would have been even more helpful if I could see a
                     replay of that flow. That would have saved us a lot of time
@@ -441,14 +431,13 @@
                   </i>
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    Customers wanted to easily identify frustration within user
-                    paths.
-                  </h3>
-                </div>
-                <p>
+              <div class="basicCard">
+                <h3>
+                  Customers wanted to easily identify frustration within user
+                  paths.
+                </h3>
+
+                <p class="caseQuote">
                   <i>
                     “Rage clicks have been a huge help in identifying areas of
                     our UI that are causing frustration. If you could
@@ -457,14 +446,13 @@
                   </i>
                 </p>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    Looker reports were difficult to use and required customer
-                    support assistance.
-                  </h3>
-                </div>
-                <p>
+              <div class="basicCard">
+                <h3>
+                  Looker reports were difficult to use and required customer
+                  support assistance.
+                </h3>
+
+                <p class="caseQuote">
                   <i>
                     “There are a number of configuration areas where things I’d
                     want to be self-service require a request to the Auryc
@@ -493,20 +481,30 @@
               opportunities where integrating Auryc’s capabilities could help
               create an enhanced path analysis experience.
             </p>
-            <div class="compScreenShots">
-              <img
-                src="assets/PathAnalysisCaseStudyImgs/Smartlook.jpg"
-                alt=""
-              />
-              <img src="assets/PathAnalysisCaseStudyImgs/Amplit.jpg" alt="" />
-              <img src="assets/PathAnalysisCaseStudyImgs/MixPanel.jpg" alt="" />
-              <img src="assets/PathAnalysisCaseStudyImgs/LogRock.jpg" alt="" />
+
+            <div class="OppScreenShotGroup imgWrapper-topMargin">
+              <div>
+                <img src="assets/PathAnalysisCaseStudyImgs/Amplit.jpg" alt="" />
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/Smartlook.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/MixPanel.jpg"
+                  alt=""
+                />
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/LogRock.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div class="heroResults">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Opportunities</h3>
-                </div>
+            <div class="cardGroup">
+              <div class="basicCard">
+                <h3>Opportunities</h3>
+
                 <ul class="analysisTypes">
                   <li>Limited data in tooltips.</li>
                   <li>Session replays separate from chart.</li>
@@ -514,10 +512,9 @@
                   <li>Few competitors surfaced frustration.</li>
                 </ul>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Best Practices</h3>
-                </div>
+              <div class="basicCard">
+                <h3>Best Practices</h3>
+
                 <ul class="analysisTypes">
                   <li>
                     Sankey diagrams are the most effective way to display user
@@ -538,32 +535,29 @@
             </p>
 
             <img
-              class="inCaseImg"
               src="assets/PathAnalysisCaseStudyImgs/Research Synth.jpg"
               alt=""
             />
 
-            <div class="basicCardGroup">
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    Laying the Foundation
-                    <span class="greyText profileText">(Phase 1)</span>
-                  </h3>
-                </div>
+            <div class="cardGroup">
+              <div class="basicCard">
+                <h3>
+                  Laying the Foundation
+                  <span class="greyText profileText">(Phase 1)</span>
+                </h3>
+
                 <p>Read-only inbound, outbound, and end-to-end charts.</p>
                 <ul class="analysisTypes">
                   <li>Allow users to handle noisy data.</li>
                   <li>Only supports defined events.</li>
                 </ul>
               </div>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>
-                    Intergrating Strenghts
-                    <span class="greyText profileText">(Phase 2)</span>
-                  </h3>
-                </div>
+              <div class="basicCard">
+                <h3>
+                  Intergrating Strenghts
+                  <span class="greyText profileText">(Phase 2)</span>
+                </h3>
+
                 <p>Path Analysis with Auryc’s existing features.</p>
                 <ul class="analysisTypes">
                   <li>Tool-tips with supporting metrics</li>
@@ -573,107 +567,80 @@
               </div>
             </div>
           </div>
-          <div class="caseSection">
+          <div class="QueryBuilderSection">
             <h2>Query Builder</h2>
             <p>
               The first component I started working on was query builder. 2
               different versions were tested internally before we reached the
               final design.
             </p>
-            <div class="completeVersionSection">
-              <div class="iterationImg">
-                <div class="designVersion"><p id="version">V1</p></div>
-                <img
-                  src="assets/PathAnalysisCaseStudyImgs/QBuilderV1.jpg"
-                  alt=""
-                />
+
+            <div class="version-ImageCardGroup">
+            
+              <div class="labelAndDesign">
+                
+                  <img
+                    src="assets/PathAnalysisCaseStudyImgs/QBuilderV1.jpg"
+                    alt=""
+                  />
               </div>
-              <div class="basicCardGroup">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Pros</h3>
-                  </div>
+                <div class="basicCard">
+                  <h3>Pros</h3>
+  
                   <p>
                     Easiest to implement because it followed current method of
                     building queries.
                   </p>
                   <div class="divider"></div>
-                  <div class="philTitle">
-                    <h3>Cons</h3>
-                  </div>
+  
+                  <h3>Cons</h3>
+  
                   <p>Query was not easy to read and understand.</p>
                 </div>
               </div>
+              
             </div>
-            <div class="completeVersionSection">
-              <div class="iterationImg">
-                <div class="designVersion"><p id="version">V2</p></div>
-                <img
-                  src="assets/PathAnalysisCaseStudyImgs/QBuilderV2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="basicCardGroup">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Pros</h3>
-                  </div>
-                  <p>
-                    Avoided technical terms making copy accessible and allowed
-                    for quick switch in analysis direction.
-                  </p>
-                  <div class="divider"></div>
-                  <div class="philTitle">
-                    <h3>Cons</h3>
-                  </div>
-                  <p>
-                    During testing users often missed the “Include” option due
-                    to its placement.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="finalDesign">
-              <h3>Final Query Builder</h3>
+          </div>
+          <div class="caseSection">
+            <h2>Final Query Builder</h2>
+
+            <p>
+              I went back to the drawing board and applied the feedback I had
+              received. In this last version I introduced an option to select
+              the number of steps in order to collect the teams thoughts and
+              effort estimate . The team saw the value in the flexibility it
+              would provide and considered it low effort.
+            </p>
+
+            <video
+              class="finalQueryVid iterationImg"
+              autoplay
+              muted
+              loop
+              src="assets/Vid/FINAL QUERY.m4v"
+            ></video>
+            <div class="basicCard">
+              <h3>Pros</h3>
 
               <p>
-                I went back to the drawing board and applied the feedback I had
-                received. In this last version I introduced an option to select
-                the number of steps in order to collect the teams thoughts and
-                effort estimate . The team saw the value in the flexibility it
-                would provide and considered it low effort.
+                Exposed analysis options improved discoverability and made it
+                easy for users to switch between analysis types.
               </p>
-              <video
-                class="finalQueryVid iterationImg"
-                autoplay
-                muted
-                loop
-                src="assets/Vid/FINAL QUERY.m4v"
-              ></video>
-              <div class="philCard">
-                <div class="philTitle">
-                  <h3>Pros</h3>
-                </div>
-                <p>
-                  Exposed analysis options improved discoverability and made it
-                  easy for users to switch between analysis types.
-                </p>
-                <p>
-                  Grouping all options specific to path analysis into a single
-                  section ensured users didn’t miss any options before moving
-                  onto the next set of parameters.
-                </p>
-                <div class="divider"></div>
-                <div class="philTitle">
-                  <h3>Cons</h3>
-                </div>
-                <p>
-                  Analysis terms could caused confusion to users that were not
-                  familiar with them. After launch we decided to include a small
-                  info icon that provided users with definitions and analysis
-                  examples.
-                </p>
+              <p>
+                Grouping all options specific to path analysis into a single
+                section ensured users didn’t miss any options before moving onto
+                the next set of parameters.
+              </p>
+              <div class="divider"></div>
+              <div>
+                <h3>Cons</h3>
               </div>
+              <p>
+                Analysis terms could caused confusion to users that were not
+                familiar with them. After launch we decided to include a small
+                info icon that provided users with definitions and analysis
+                examples.
+              </p>
             </div>
           </div>
           <div class="caseSection">
@@ -684,15 +651,19 @@
               concept I started with an exercise of translating the table view
               of an outbound path analysis into a chart.
             </p>
-            <div class="compScreenShots">
-              <img
-                src="assets/PathAnalysisCaseStudyImgs/OldTablePA.jpg"
-                alt=""
-              />
-              <img
-                src="assets/PathAnalysisCaseStudyImgs/firstPAexer.jpg"
-                alt=""
-              />
+            <div class="firsExScreenshots">
+              <div>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/OldTablePA.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/firstPAexer.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
           <div class="caseSection">
@@ -723,29 +694,29 @@
               alt=""
             />
           </div>
-          <div class="caseSection">
+          <div class="QueryBuilderSection">
             <h2>Excluding Events</h2>
             <p>
               I proposed 2 methods to exclude events from the chart: using the
               control bar or excluding from the chart itself. Due to the time
               crunch excluding events from the chart was pushed to phase 2.
             </p>
-            <div class="completeVersionSection">
-              <div class="iterationImg">
-                <div class="designVersion"><p id="version">Method 1</p></div>
-                <video
-                  class="finalQueryVid"
-                  autoplay
-                  muted
-                  loop
-                  src="assets/Vid/EXCLUDEV1.m4v"
-                ></video>
-              </div>
-              <div class="basicCardGroup">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Excluding from Toolbar</h3>
+            <div>
+              <div class="completeVersionSection">
+                <div>
+                  <div class="designVersion"><p id="version">Method 1</p></div>
+                  <div class="queryVersionImg">
+                    <video
+                      autoplay
+                      muted
+                      loop
+                      src="assets/Vid/EXCLUDEV1.m4v"
+                    ></video>
                   </div>
+                </div>
+                <div class="basicCard">
+                  <h3>Excluding from Toolbar</h3>
+
                   <p>
                     The main way to exclude events would be via the control bar
                     where it would remain visible for users who already have in
@@ -753,59 +724,50 @@
                   </p>
                 </div>
               </div>
+              <div class="completeVersionSection">
+                <div>
+                  <div class="designVersion"><p id="version">Method 2</p></div>
+                  <div class="queryVersionImg">
+                    <video
+                      autoplay
+                      muted
+                      loop
+                      src="assets/Vid/ExcludeV2.m4v"
+                    ></video>
+                  </div>
+                </div>
+                <div class="basicCard">
+                  <h3>Excluding from Chart</h3>
+
+                  <p>
+                    The ability to exclude events from the chart itself is meant
+                    to reduce user effort by allowing them to exclude events on
+                    the spot without interrupting their analysis.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="phase1Section">
+            <h2>Laying the Foundation</h2>
             <div class="completeVersionSection">
-              <div class="iterationImg">
-                <div class="designVersion"><p id="version">Method 2</p></div>
+              <div>
                 <video
-                  class="finalQueryVid"
                   autoplay
                   muted
                   loop
                   src="assets/Vid/ExcludeV2.m4v"
                 ></video>
               </div>
-              <div class="basicCardGroup">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Excluding from Toolbar</h3>
-                  </div>
-                  <p>
-                    The main way to exclude events would be via the control bar
-                    where it would remain visible for users who already have in
-                    mind the events they want to exclude.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caseSection">
-            <h2>Laying the Foundation</h2>
-
-            <div class="completeVersionSection">
-              <div class="iterationImg">
-                <video
-                  class="finalQueryVid"
-                  autoplay
-                  muted
-                  loop
-                  src="assets/Vid/PHASE1FINAL.m4v"
-                ></video>
-              </div>
               <div class="basicCard">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Phase 1</h3>
-                  </div>
-                  <ul class="analysisTypes">
-                    <li>Inbound (Read only)</li>
-                    <li>Outbound (Read only)</li>
-                    <li>End-to-End (Read only)</li>
-                    <li>Event exclusion</li>
-                    <li>Collapse repeated paths/events</li>
-                    <li>Supports only defined events</li>
-                  </ul>
-                </div>
+                <h3>Opportunities</h3>
+
+                <ul class="analysisTypes">
+                  <li>Limited data in tooltips.</li>
+                  <li>Session replays separate from chart.</li>
+                  <li>Few supported raw click events and event definition.</li>
+                  <li>Few competitors surfaced frustration.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -822,11 +784,10 @@
                   src="assets/Vid/pathAnalysisChart(compressed).mp4"
                 ></video>
               </div>
-              <div class="basicCardGroup">
-                <div class="philCard">
-                  <div class="philTitle">
-                    <h3>Phase 2</h3>
-                  </div>
+              <div class="cardGroup">
+                <div class="basicCard">
+                  <h3>Phase 2</h3>
+
                   <ul class="analysisTypes">
                     <li>Tooltips with supporting metrics</li>
                     <li>Frustration events</li>
@@ -859,27 +820,27 @@
           <div class="caseSection">
             <h2>Results</h2>
 
-            <div class="heroResults" id="bottomResults">
-              <div class="resultCard">
-                <div class="philTitle">
+            <div class="cardGroup" id="resultGroup">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/attach_money.svg" type=""></object>
                 </div>
                 <p>ARR increase of 20% from previous quarter.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/people_alt.svg" type=""></object>
                 </div>
                 <p>Adopted by 78% of accounts.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/article.svg" type=""></object>
                 </div>
                 <p>Expansion rate of 15% on overall contract value.</p>
               </div>
-              <div class="resultCard">
-                <div class="philTitle">
+              <div class="iconCard">
+                <div>
                   <object data="assets/SVG/insights.svg" type=""></object>
                 </div>
                 <p>Increased retention rate to 92%.</p>

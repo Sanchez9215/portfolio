@@ -1,16 +1,34 @@
 .caseStudyContent {
   max-width: 1104px;
+  width: 100%;
 }
+
+.imgWrapper-topMargin {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.basicCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* HERO START */
+
 .caseStudyHero {
   margin-bottom: 7.5rem;
 }
 .caseStudyTitleDescription {
   margin-bottom: 32px;
 }
-img {
-  width: 100%;
-  border-radius: 8px;
+.caseHeroImg {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20%;
 }
+
 .vidContainer {
   display: flex;
   justify-content: center;
@@ -22,34 +40,38 @@ img {
   position: absolute;
   top: 6%;
 }
-.caseHeroImg {
-  text-align: center;
-  position: relative;
-  margin-bottom: 25%;
-}
 
-.resultCard {
-  gap: 1.5rem;
-  padding: 24px 16px 16px;
-  border: 1px solid var(--secondary);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-  text-align: center;
-}
-
-.heroResults {
+.resultGroup {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 16px;
 }
 
-.basicCardGroup {
+/* ABOUT SECTION */
+
+.aboutSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 7.5rem;
+}
+
+.projectDetails {
+  display: flex;
+  row-gap: 16px;
+  column-gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.singleDetail {
+  flex: 1 0 31%;
+}
+
+/* BACKGROUND */
+
+#aboutImg {
+  max-width: 540px;
 }
 
 .oppCards {
@@ -58,7 +80,42 @@ img {
   gap: 16px;
 }
 
-#auditCardGroup {
+.auditCaseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 7.5rem;
+}
+
+/* QUERY BUILDER */
+
+.version-ImageCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+#version {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  line-height: 24px;
+}
+
+/* .labelAndDesign {
+  height: 30vh;
+  background-color: aqua;
+} */
+
+.phase1Section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 7.5rem;
+}
+
+.auditCardGroup {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -70,36 +127,42 @@ img {
   gap: 16px;
   margin-bottom: 7.5rem;
 }
-#aboutSec {
+
+.QueryBuilderSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 7.5rem;
 }
 
-.inCaseImg {
-  margin: 16px 0px;
-}
-
-.projectDetails {
+/* .QueryBuilderSection :nth-child(3) {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
+  margin-top: 16px;
 }
 
-.roleDetails {
+.completeVersionSection :nth-child(1) {
   display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
-.singleDetail {
-  width: 100%;
-}
+  flex-direction: column;
+  gap: 8px;
+} */
 
 .singleDetail ul li {
   list-style: none;
   font-size: 0.86rem;
+  color: var(--secondary);
+}
+
+.opportCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.caseQuote {
+  color: var(--secondary);
 }
 
 #components li {
@@ -117,7 +180,7 @@ img {
 }
 
 .analysisTypes li {
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 
 .analysisTypes :nth-child(3) {
@@ -133,11 +196,27 @@ img {
   width: 100%;
 }
 
-.compScreenShots {
+.OppScreenShotGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.firsExScreenshots {
   margin: 16px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.OppImgAndCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.OppScreenShotGroup div {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 
 .designVersion {
@@ -147,17 +226,16 @@ img {
   height: 12px;
   line-height: 12px;
 }
-#version {
-  color: var(--secondary);
-  font-weight: 500;
-  font-size: 12px;
-  text-align: left;
-}
 
 .completeVersionSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.queryVersionImg {
+  background-color: red;
+  border-radius: 8px;
+  height: 100%;
 }
 
 .iterationImg {
@@ -187,57 +265,121 @@ img {
   margin-top: 16px;
 }
 
+/* MEDIA QUERIES START */
+
+@media (min-width: 520px) {
+  .singleDetail {
+    flex: 1 0 32%;
+  }
+}
 @media (min-width: 604px) {
-  .heroResults {
+  /* HERO */
+  #resultGroup {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projectDetails {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .auditCardGroup {
+  /* WHAT ARE WE WORKING WITH */
+  #auditCardGroup {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
-  .auditCardGroup :nth-child(1) {
+  #auditCardGroup :nth-child(1) {
     grid-column: span 2;
   }
-  .auditCardGroup :nth-child(2) {
+  #auditCardGroup :nth-child(2) {
     grid-column: span 2;
   }
-  .auditCardGroup :nth-child(3) {
+  #auditCardGroup :nth-child(3) {
     grid-column: span 4;
   }
 
-  #opportunitySection {
+  #remainStackedCardGroup {
+    flex-direction: column;
+  }
+  .OppScreenShotGroup {
     display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+
+  /* #opportunitySection {
+    display: flex;
+  } */
+  .firsExScreenshots {
+    flex-direction: row;
+  }
+
+  .firsExScreenshots div {
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  /* QUERY BUILDER */
+}
+
+@media (min-width: 724px) {
+  /* ABOUT */
+
+  .singleDetail {
+    flex: 1 0 21%;
+  }
+
+  .OppScreenShotGroup {
+    flex-direction: row-reverse;
+  }
+  .opportCardGroup {
+    flex-direction: row;
+  }
+  .opportCardGroup div {
+    width: 100%;
+  }
+  .basicCardGroup {
+    flex-direction: row;
+  }
+  .basicCardGroup div {
+    width: 100%;
   }
 }
 @media (min-width: 900px) {
-  #aboutSec {
+  .singleDetail {
+    flex: 1 0 31%;
+  }
+
+  .aboutSection {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(8, 1fr);
     gap: 16px;
     grid-row-start: 3;
     grid-column: span 2;
   }
 
-  #aboutSec :nth-child(2) {
+  .aboutSection :nth-child(2) {
     grid-row-start: 2;
-    grid-column: span 2;
+    grid-column: span 3;
   }
-  #aboutSec :nth-child(4) {
+  .aboutSection :nth-child(4) {
     grid-row-start: 3;
-    grid-column: span 2;
+    grid-column: span 3;
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
   }
-  #aboutSec :nth-child(3) {
-    grid-column-start: 3;
+  .aboutSection :nth-child(3) {
     grid-row-start: 2;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-end: 4;
+  }
+
+  #auditCardGroup {
+    display: flex;
+    flex-direction: row;
+  }
+  /* QUERY BUILDER */
+  .version-ImageCardGroup {
+    display: flex;
+    flex-direction: row;
   }
 }

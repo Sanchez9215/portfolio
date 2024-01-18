@@ -1,3 +1,6 @@
+.AboutMeContent {
+  max-width: 1104px;
+}
 .aboutMeImgWrapper {
   width: 100%;
   margin-bottom: 64px;
@@ -11,13 +14,13 @@
 
 .aboutLargeText {
   margin-bottom: 64px;
-  max-width: 1104px;
+
   width: 100%;
 }
 
 .aboutMeContent {
   display: flex;
-  max-width: 1104px;
+
   flex-direction: column;
   gap: 16px;
 }
@@ -35,24 +38,8 @@
 
 .philSection {
   display: flex;
-  max-width: 1104px;
+
   margin-bottom: 64px;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.philCard {
-  /* gap: 1.5rem; */
-  padding: 24px 16px 16px;
-  border: 1px solid var(--secondary);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cardGroup {
-  display: flex;
   flex-direction: column;
   gap: 16px;
 }
@@ -97,14 +84,5 @@
   }
   .aboutMeImg {
     height: 100%;
-  }
-}
-
-@media (min-width: 900px) {
-  .cardGroup {
-    flex-direction: row;
-  }
-  .philCard {
-    width: 100%;
   }
 }
