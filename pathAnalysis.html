@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/pathAnalysis.css" />
     <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/CaseStudyStyles.css" />
 
     <!-- <link rel="stylesheet" href="styles/aboutMe.css" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Path Analysis</title>
   </head>
   <body>
     <!-- NAV -->
@@ -149,7 +150,7 @@
                 how users truly interact with their product/site.
               </h3>
             </div>
-            <div class="caseHeroImg">
+            <div class="PAcaseHeroImg">
               <div>
                 <img
                   src="assets/PathAnalysisCaseStudyImgs/CaseHeroImgBG.jpg"
@@ -193,7 +194,7 @@
               </div>
             </div>
           </div>
-          <div class="aboutSection">
+          <div class="AboutSection">
             <h2>About</h2>
             <p>
               Auryc is a product analytics platform that helps product teams
@@ -208,7 +209,7 @@
                 alt=""
               />
             </div>
-            <div class="projectDetails">
+            <div class="projectDetails marginTopcardGroup">
               <div class="singleDetail">
                 <h4>Role</h4>
                 <ul>
@@ -266,13 +267,13 @@
               </div>
             </div>
           </div>
-          <div class="caseSection marginTopcardGroup">
+          <div class="caseSection">
             <h2>Opportunity</h2>
             <p>
               How can we provide a more intuitive & differentiated path analysis
               experience?
             </p>
-            <div class="cardGroup">
+            <div class="cardGroup marginTopcardGroup">
               <div class="basicCard">
                 <h3>More Control</h3>
                 <p>
@@ -292,14 +293,14 @@
               </div>
             </div>
           </div>
-          <div class="auditCaseSection">
+          <div class="caseSection">
             <h2>What are we working with?</h2>
             <p>
               I conducted an audit of our current path analysis tool to gain a
               better understanding of how it works and how we can improve the
               user experience.
             </p>
-            <div class="imgWrapper-topMargin" id="auditImg">
+            <div class="imgWrapper-topMargin">
               <img
                 src="assets/PathAnalysisCaseStudyImgs/BeforePathImage.png"
                 alt=""
@@ -309,7 +310,7 @@
               <div class="basicCard">
                 <h3>Components</h3>
 
-                <ul id="components">
+                <ul id="svgNumberList">
                   <li>
                     <object data="assets/SVG/1.svg" type=""></object>Query
                     Builder
@@ -415,7 +416,7 @@
                   find valuable insights.
                 </h3>
 
-                <p class="caseQuote">
+                <p class="greyText">
                   <i>
                     “I’d like to see the path analysis feature be easier to use
                     , less cluttered. It would be nice to filter the results by
@@ -429,7 +430,7 @@
                   fix bugs and usability issues more effectively.
                 </h3>
 
-                <p class="caseQuote">
+                <p class="greyText">
                   <i>
                     “ ...it would have been even more helpful if I could see a
                     replay of that flow. That would have saved us a lot of time
@@ -443,7 +444,7 @@
                   paths.
                 </h3>
 
-                <p class="caseQuote">
+                <p class="greyText">
                   <i>
                     “Rage clicks have been a huge help in identifying areas of
                     our UI that are causing frustration. If you could
@@ -458,7 +459,7 @@
                   support assistance.
                 </h3>
 
-                <p class="caseQuote">
+                <p class="greyText">
                   <i>
                     “There are a number of configuration areas where things I’d
                     want to be self-service require a request to the Auryc
@@ -476,8 +477,12 @@
               explore path analysis best practices and identify any feature gaps
               we could capitalize on.
             </p>
-            <div class="competitiveChart">
-              <object data="assets/SVG/CompetitiveChart.svg" type=""></object>
+            <div class="imgWrapper-topMargin">
+              <object
+                class="compAnalysisChart"
+                data="assets/SVG/CompetitiveChart.svg"
+                type=""
+              ></object>
             </div>
           </div>
           <div class="caseSection">
@@ -575,7 +580,7 @@
               </div>
             </div>
           </div>
-          <div class="QueryBuilderSection">
+          <div class="caseSection">
             <h2>Query Builder</h2>
             <p>
               The first component I started working on was query builder. 2
@@ -650,7 +655,7 @@
                     autoplay
                     muted
                     loop
-                    id="QueryBuilderVidZoom"
+                    id="imgVideoScaleUp"
                     src="assets/Vid/FINAL QUERY.m4v"
                   ></video>
                 </div>
@@ -679,37 +684,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- <video
-              class="finalQueryVid iterationImg"
-              autoplay
-              muted
-              loop
-              src="assets/Vid/FINAL QUERY.m4v"
-            ></video>
-            <div class="basicCard">
-              <h3>Pros</h3>
-
-              <p>
-                Exposed analysis options improved discoverability and made it
-                easy for users to switch between analysis types.
-              </p>
-              <p>
-                Grouping all options specific to path analysis into a single
-                section ensured users didn’t miss any options before moving onto
-                the next set of parameters.
-              </p>
-              <div class="divider"></div>
-              <div>
-                <h3>Cons</h3>
-              </div>
-              <p>
-                Analysis terms could caused confusion to users that were not
-                familiar with them. After launch we decided to include a small
-                info icon that provided users with definitions and analysis
-                examples.
-              </p>
-            </div> -->
           </div>
           <div class="caseSection">
             <h2>Sankey Chart Design</h2>
@@ -719,7 +693,7 @@
               concept I started with an exercise of translating the table view
               of an outbound path analysis into a chart.
             </p>
-            <div class="firsExScreenshots">
+            <div class="imgGroupNoLabels">
               <div>
                 <img
                   src="assets/PathAnalysisCaseStudyImgs/OldTablePA.jpg"
@@ -743,11 +717,12 @@
               visualized the flow of traffic from one end to another.
             </p>
 
-            <img
-              class="iterationImg"
-              src="assets/PathAnalysisCaseStudyImgs/SankeyExer.jpg"
-              alt=""
-            />
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/PathAnalysisCaseStudyImgs/SankeyExer.jpg"
+                alt=""
+              />
+            </div>
           </div>
           <div class="caseSection">
             <h2>Final Sankey Chart</h2>
@@ -756,11 +731,12 @@
               deliver a final version of the chart.
             </p>
 
-            <img
-              class="iterationImg"
-              src="assets/PathAnalysisCaseStudyImgs/FinalChart.jpg"
-              alt=""
-            />
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/PathAnalysisCaseStudyImgs/FinalChart.jpg"
+                alt=""
+              />
+            </div>
           </div>
           <div class="caseSection">
             <h2>Excluding Events</h2>
@@ -865,16 +841,13 @@
           <div class="caseSection">
             <h2>In Production</h2>
 
-            <div class="completeVersionSection">
-              <div class="iterationImg">
-                <video
-                  class="finalQueryVid"
-                  autoplay
-                  muted
-                  loop
-                  src="assets/Vid/LIVE ANALYSIS.mp4"
-                ></video>
-              </div>
+            <div class="imgWrapper-topMargin">
+              <video
+                autoplay
+                muted
+                loop
+                src="assets/Vid/LIVE ANALYSIS.mp4"
+              ></video>
             </div>
           </div>
 

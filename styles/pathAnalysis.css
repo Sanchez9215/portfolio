@@ -1,44 +1,10 @@
-.caseStudyContent {
-  max-width: 1104px;
-  width: 100%;
-}
-
-.imgWrapper-topMargin {
-  text-align: center;
-  margin-top: 16px;
-}
-
-.basicCardGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
 /* HERO START */
 
-.caseStudyHero {
-  margin-bottom: 7.5rem;
-}
-.caseStudyTitleDescription {
-  margin-bottom: 32px;
-}
-.caseHeroImg {
+.PAcaseHeroImg {
   text-align: center;
   position: relative;
-  margin-bottom: 20%;
-}
-
-.vidContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.heroVid {
-  width: 95%;
-  border-radius: 6px;
-  position: absolute;
-  top: 6%;
+  margin-bottom: 28%;
+  z-index: -1;
 }
 
 .resultGroup {
@@ -50,29 +16,11 @@
 
 /* ABOUT SECTION */
 
-.aboutSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 7.5rem;
-}
-
-.projectDetails {
-  display: flex;
-  row-gap: 16px;
-  column-gap: 24px;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.singleDetail {
+/* .singleDetail {
   flex: 1 0 31%;
-}
+} */
 
 /* BACKGROUND */
-
-#aboutImg {
-  max-width: 540px;
-}
 
 .oppCards {
   display: flex;
@@ -89,37 +37,6 @@
 
 /* QUERY BUILDER */
 
-.version-ImageCardGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-#version {
-  color: var(--secondary);
-  font-weight: 500;
-  font-size: 12px;
-  text-align: left;
-  line-height: 24px;
-}
-
-.labelAndDesign {
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex-basis: 150%;
-  box-sizing: border-box;
-}
-.labelAndDesign2 {
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex-basis: 50%;
-  box-sizing: border-box;
-}
-
 .phase1Section {
   display: flex;
   flex-direction: column;
@@ -131,13 +48,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.caseSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 7.5rem;
 }
 
 .QueryBuilderSection {
@@ -160,31 +70,17 @@
   gap: 8px;
 } */
 
-.singleDetail ul li {
+/* .singleDetail ul li {
   list-style: none;
   font-size: 0.86rem;
   color: var(--secondary);
-}
+} */
 
 .opportCardGroup {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
-}
-
-.caseQuote {
-  color: var(--secondary);
-}
-
-#components li {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-#components :nth-child(3) {
-  margin-bottom: 0;
 }
 
 .listItemPadding {
@@ -213,7 +109,7 @@
   flex-direction: column;
   gap: 16px;
 }
-.firsExScreenshots {
+.imgGroupNoLabels {
   margin: 16px 0px 0px 0px;
   display: flex;
   flex-direction: column;
@@ -257,11 +153,6 @@
   margin-top: 16px;
 }
 
-.divider {
-  border-bottom: 1px solid var(--secondary);
-  margin: 4px 0;
-}
-
 .finalDesign {
   margin-top: 16px;
   display: flex;
@@ -277,13 +168,12 @@
   margin-top: 16px;
 }
 
+.compAnalysisChart {
+  width: 100%;
+}
+
 /* MEDIA QUERIES START */
 
-@media (min-width: 520px) {
-  .singleDetail {
-    flex: 1 0 32%;
-  }
-}
 @media (min-width: 604px) {
   /* HERO */
   #resultGroup {
@@ -307,9 +197,6 @@
     grid-column: span 4;
   }
 
-  #remainStackedCardGroup {
-    flex-direction: column;
-  }
   .OppScreenShotGroup {
     display: flex;
     flex-direction: row-reverse;
@@ -319,25 +206,11 @@
   /* #opportunitySection {
     display: flex;
   } */
-  .firsExScreenshots {
-    flex-direction: row;
-  }
-
-  .firsExScreenshots div {
-    background-color: #fff;
-    border-radius: 8px;
-  }
 
   /* QUERY BUILDER */
 }
 
 @media (min-width: 724px) {
-  /* ABOUT */
-
-  .singleDetail {
-    flex: 1 0 21%;
-  }
-
   .OppScreenShotGroup {
     flex-direction: row-reverse;
   }
@@ -359,56 +232,8 @@
     flex: 1 0 31%;
   }
 
-  .aboutSection {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 16px;
-    grid-row-start: 3;
-    grid-column: span 2;
-  }
-
-  .aboutSection :nth-child(2) {
-    grid-row-start: 2;
-    grid-column: span 3;
-  }
-  .aboutSection :nth-child(4) {
-    grid-row-start: 3;
-    grid-column: span 3;
-    /* display: flex;
-    flex-direction: column; */
-    width: 100%;
-  }
-  .aboutSection :nth-child(3) {
-    grid-row-start: 2;
-    grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-end: 4;
-  }
-
   #auditCardGroup {
     display: flex;
     flex-direction: row;
-  }
-
-  #remainStackedCardGroup {
-    flex-direction: row;
-  }
-
-  /* QUERY BUILDER */
-  .version-ImageCardGroup {
-    display: flex;
-    flex-direction: row;
-  }
-  #imageVideoExtraHeight {
-    height: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-  }
-  #QueryBuilderVidZoom {
-    width: 150%;
-  }
-
-  .zoomVideoClip {
-    overflow: hidden;
   }
 }
