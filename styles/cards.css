@@ -55,9 +55,19 @@
   margin-bottom: 0;
 }
 
-.divider {
-  border-bottom: 1px solid var(--secondary);
-  margin: 4px 0;
+.QuotecardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.QuoteCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
 }
 
 @media (min-width: 604px) {
@@ -78,5 +88,16 @@
   }
   #remainStackedCardGroup {
     flex-direction: row;
+  }
+
+  .QuoteCard {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .QuotecardGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }

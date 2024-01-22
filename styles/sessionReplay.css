@@ -12,11 +12,28 @@
   margin-top: 16px;
 }
 
+.Iteration-CustomCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 #oppQuestion {
   font-weight: 300;
 }
 
+#opportunitySection {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .imgInCardGroup {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.imgWithCardGroup {
   display: flex;
   gap: 16px;
   flex-direction: column;
@@ -51,6 +68,9 @@
   right: 35%;
   max-width: 1104px;
 }
+#removeTopMargin {
+  gap: 0px;
+}
 
 @media (min-width: 604px) {
   .imgInCardGroup {
@@ -58,6 +78,15 @@
     gap: 16px;
     flex-direction: row;
   }
+}
+
+@media (min-width: 724px) {
+  .Iteration-CustomCardGroup {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
 }
 
 @media (min-width: 1000px) {

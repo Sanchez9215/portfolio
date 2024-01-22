@@ -109,12 +109,7 @@
   flex-direction: column;
   gap: 16px;
 }
-.imgGroupNoLabels {
-  margin: 16px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+
 .OppImgAndCards {
   display: flex;
   flex-direction: column;

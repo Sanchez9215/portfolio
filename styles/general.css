@@ -64,11 +64,11 @@ li {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 h3 {
@@ -76,7 +76,7 @@ h3 {
   font-weight: 400;
 }
 h4 {
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 h5 {
@@ -108,7 +108,7 @@ nav {
   background-color: #000505;
   color: #fff;
   padding: 0 6%;
-  height: 64px;
+  height: 72px;
 }
 
 .navLinks {
@@ -329,19 +329,22 @@ nav {
   justify-content: center;
   border-top: 1px solid var(--secondary);
 }
-.footercopycontents {
-  margin-bottom: 16px;
+
+.footerItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
+
+#CenterfooterText {
+  text-align: center;
+}
+
 .emailLink {
   padding-top: 4px;
 }
 
-#copyText {
-  color: var(--secondary);
-}
-.footerText {
-  text-align: center;
-}
 .footerIcons {
   text-align: center;
   margin-top: 8px;
@@ -354,14 +357,14 @@ nav {
 
 /* Media Query Starts */
 @media (min-width: 360px) {
-  h1 {
+  /* h1 {
     font-size: 2.5rem;
     font-weight: 400;
   }
   h2 {
     font-size: 2rem;
     font-weight: 400;
-  }
+  } */
   /* h3 {
     font-size: 1.375rem;
     font-weight: 500;
@@ -491,14 +494,19 @@ nav {
   }
 }
 @media (min-width: 1200px) {
-  h1 {
+  :root {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /* h1 {
     font-size: 3.25rem;
     font-weight: 400;
   }
   h2 {
     font-size: 2.5rem;
     font-weight: 400;
-  }
+  } */
   /* h3 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -521,17 +529,5 @@ nav {
     grid-column-start: 2;
     grid-row-start: 3;
     grid-column: span 4;
-  }
-  @media (max-width: 724px) {
-    /* .navLinks {
-      position: absolute;
-      right: 0;
-      height: 92vh;
-      top: 8vh;
-      background-color: red;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    } */
   }
 }
