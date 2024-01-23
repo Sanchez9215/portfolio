@@ -1,0 +1,9 @@
+#medImageVisDes {
+  width: 75%;
+}
+
+.centerVisImage {
+  display: flex;
+  margin-bottom: 7.5rem;
+  justify-content: center;
+}

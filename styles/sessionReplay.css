@@ -33,12 +33,6 @@
   flex-direction: column;
   margin-top: 16px;
 }
-.imgWithCardGroup {
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  margin-top: 16px;
-}
 
 .alwaysStackedCards {
   display: flex;
@@ -70,6 +64,15 @@
 }
 #removeTopMargin {
   gap: 0px;
+}
+
+.wireframeImages {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 @media (min-width: 604px) {

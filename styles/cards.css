@@ -70,6 +70,15 @@
   border-radius: 8px;
 }
 
+.divider {
+  border-bottom: var(--secondary) solid 1px;
+  padding: 8px 0px;
+}
+
+#ConsTopPadding {
+  padding-top: 16px;
+}
+
 @media (min-width: 604px) {
   .cardGroup {
     flex-direction: row;
