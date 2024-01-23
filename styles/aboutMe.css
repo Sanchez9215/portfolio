@@ -39,7 +39,7 @@
 .philSection {
   display: flex;
 
-  margin-bottom: 64px;
+  margin-bottom: 7.5rem;
   flex-direction: column;
   gap: 16px;
 }
@@ -54,6 +54,31 @@
 .photoGallery img {
   width: 100%;
   border-radius: 0px;
+}
+
+.CollQuoteGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.CollQuoteCard {
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* flex-basis: 65%; */
+  box-sizing: border-box;
+}
+
+.quoteAndDetails {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.colleagueDetails {
 }
 
 @media (min-width: 604px) {
@@ -71,7 +96,8 @@
   .aboutTopGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    column-gap: 24px;
+    row-gap: 16px;
     margin-bottom: 7.5rem;
     max-width: 1104px;
   }
