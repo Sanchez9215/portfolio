@@ -163,6 +163,10 @@
   margin-top: 16px;
 }
 
+#compChartWrapper {
+  width: 100%;
+}
+
 .compAnalysisChart {
   width: 100%;
 }
