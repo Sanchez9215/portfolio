@@ -21,7 +21,7 @@
 }
 #aboutImg {
   max-width: 540px;
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .imgGroupNoLabels {
