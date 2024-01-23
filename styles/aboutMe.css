@@ -1,0 +1,89 @@
+.AboutMeContent {
+  max-width: 1104px;
+}
+.aboutMeImgWrapper {
+  width: 100%;
+  margin-bottom: 64px;
+}
+.aboutMeImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.aboutLargeText {
+  margin-bottom: 64px;
+
+  width: 100%;
+}
+
+.aboutMeContent {
+  display: flex;
+
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+#muralLink {
+  text-decoration: underline;
+}
+
+.philSection {
+  display: flex;
+
+  margin-bottom: 64px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.photoGallery {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.photoGallery img {
+  width: 100%;
+  border-radius: 0px;
+}
+
+@media (min-width: 604px) {
+  .photoGallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1104px;
+  }
+  .photoGallery :nth-child(1) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 724px) {
+  .aboutTopGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 7.5rem;
+    max-width: 1104px;
+  }
+
+  .aboutLargeText {
+    grid-row-start: 1;
+  }
+  .aboutMeImgWrapper {
+    margin-bottom: 0;
+    grid-row: span 2;
+  }
+  .aboutMeImg {
+    height: 100%;
+  }
+}

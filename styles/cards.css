@@ -1,0 +1,112 @@
+.basicCard {
+  /* gap: 1.5rem; */
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.cardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.marginTopcardGroup {
+  margin-top: 16px;
+}
+
+.iconCard {
+  gap: 1.5rem;
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.listItemPadding {
+  padding-inline-start: 16px;
+}
+
+.listItemPadding li {
+  padding-bottom: 8px;
+}
+
+.listItemPadding :nth-child(3) {
+  margin-bottom: 0;
+}
+
+#svgNumberList li {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#svgNumberList :nth-child(3) {
+  margin-bottom: 0;
+}
+
+.QuotecardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.QuoteCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+}
+
+.divider {
+  border-bottom: var(--secondary) solid 1px;
+  padding: 8px 0px;
+}
+
+#ConsTopPadding {
+  padding-top: 16px;
+}
+
+@media (min-width: 604px) {
+  .cardGroup {
+    flex-direction: row;
+    width: 100%;
+  }
+  #remainStackedCardGroup {
+    flex-direction: column;
+  }
+}
+@media (min-width: 900px) {
+  .cardGroup {
+    flex-direction: row;
+  }
+  #basicCardVMargin {
+    margin-top: 32px;
+  }
+  #remainStackedCardGroup {
+    flex-direction: row;
+  }
+
+  .QuoteCard {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .QuotecardGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

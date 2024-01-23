@@ -1,0 +1,234 @@
+/* HERO START */
+
+.PAcaseHeroImg {
+  text-align: center;
+  position: relative;
+  margin-bottom: 28%;
+  z-index: -1;
+}
+
+.resultGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ABOUT SECTION */
+
+/* .singleDetail {
+  flex: 1 0 31%;
+} */
+
+/* BACKGROUND */
+
+.oppCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auditCaseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 7.5rem;
+}
+
+/* QUERY BUILDER */
+
+.phase1Section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 7.5rem;
+}
+
+.auditCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.QueryBuilderSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 7.5rem;
+}
+
+/* .QueryBuilderSection :nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.completeVersionSection :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+} */
+
+/* .singleDetail ul li {
+  list-style: none;
+  font-size: 0.86rem;
+  color: var(--secondary);
+} */
+
+.opportCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.listItemPadding {
+  padding-inline-start: 16px;
+}
+
+.listItemPadding li {
+  padding-bottom: 8px;
+}
+
+.listItemPadding :nth-child(3) {
+  margin-bottom: 0;
+}
+
+.competitiveChart {
+  margin: 16px 0px 0px 0px;
+  text-align: center;
+}
+
+.competitiveChart object {
+  width: 100%;
+}
+
+.OppScreenShotGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.OppImgAndCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.OppScreenShotGroup div {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.designVersion {
+  text-align: left;
+  border-radius: 100px;
+
+  height: 12px;
+  line-height: 12px;
+}
+
+.completeVersionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.queryVersionImg {
+  background-color: red;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.iterationImg {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.finalDesign {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.finalQueryVid {
+  width: 100%;
+}
+
+#bottomResults {
+  margin-top: 16px;
+}
+
+.compAnalysisChart {
+  width: 100%;
+}
+
+/* MEDIA QUERIES START */
+
+@media (min-width: 604px) {
+  /* HERO */
+  #resultGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* WHAT ARE WE WORKING WITH */
+  #auditCardGroup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  #auditCardGroup :nth-child(1) {
+    grid-column: span 2;
+  }
+  #auditCardGroup :nth-child(2) {
+    grid-column: span 2;
+  }
+  #auditCardGroup :nth-child(3) {
+    grid-column: span 4;
+  }
+
+  .OppScreenShotGroup {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+
+  /* #opportunitySection {
+    display: flex;
+  } */
+
+  /* QUERY BUILDER */
+}
+
+@media (min-width: 724px) {
+  .OppScreenShotGroup {
+    flex-direction: row-reverse;
+  }
+  .opportCardGroup {
+    flex-direction: row;
+  }
+  .opportCardGroup div {
+    width: 100%;
+  }
+  .basicCardGroup {
+    flex-direction: row;
+  }
+  .basicCardGroup div {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .singleDetail {
+    flex: 1 0 31%;
+  }
+
+  #auditCardGroup {
+    display: flex;
+    flex-direction: row;
+  }
+}

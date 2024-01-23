@@ -1,0 +1,24 @@
+.lookerDashboardImgGroup {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.lookerDashboardImgGroup div {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+#dashboardAuditImgs {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 604px) {
+  .lookerDashboardImgGroup {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+  }
+}

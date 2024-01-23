@@ -1,0 +1,107 @@
+.SRcaseHeroImg {
+  text-align: center;
+  position: relative;
+  margin-bottom: 10%;
+  z-index: -1;
+}
+
+.version-ImageDoubleCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.Iteration-CustomCardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#oppQuestion {
+  font-weight: 300;
+}
+
+#opportunitySection {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.imgInCardGroup {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.alwaysStackedCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#remainStackedCardGroup div {
+  flex-basis: 100%;
+}
+#feedbackVidWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#feedbackVid {
+  width: 74%;
+  position: relative;
+  left: 44%;
+  max-width: 1104px;
+}
+
+#feedbackOverLay {
+  width: 99%;
+  border-radius: 6px;
+  position: relative;
+  right: 35%;
+  max-width: 1104px;
+}
+#removeTopMargin {
+  gap: 0px;
+}
+
+.wireframeImages {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 604px) {
+  .imgInCardGroup {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 724px) {
+  .Iteration-CustomCardGroup {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1000px) {
+  #cardcolumngroup {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .version-ImageDoubleCardGroup {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}

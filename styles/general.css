@@ -1,8 +1,24 @@
 /* variable */
+html {
+  overflow-x: hidden;
+}
 :root {
-  --primary: #1c2323;
-  --secondary: #bdff00;
-  --tertiary: #f5f7fa;
+  --primary: #000505;
+  --secondary: #808282;
+  --tertiary: #fff;
+  --warning: #e5d528;
+  --gradient: linear-gradient(
+    99deg,
+    #69abfc 37.81%,
+    #4dc1c6 70.79%,
+    #31d891 103.59%
+  );
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* reset */
@@ -10,6 +26,8 @@
   margin: 0;
   padding: 0;
 }
+
+/* Typography */
 
 body,
 p,
@@ -20,24 +38,12 @@ li {
   padding: 0;
   text-decoration: none;
 }
-li {
-  list-style-type: none;
-}
 
 /* base styles */
 body {
   background: var(--primary);
-  overflow-x: hidden;
-  font-family: "Kanit", sans-serif;
-}
 
-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  margin-top: 4vh;
+  font-family: "Roboto", sans-serif;
 }
 
 h1,
@@ -47,632 +53,481 @@ h4,
 h5,
 h6 {
   color: var(--tertiary);
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.25;
 }
 
 p,
 a,
 li {
   color: var(--tertiary);
-  text-transform: uppercase;
   font-weight: 300;
-  line-height: 1.25em;
-}
-
-#company-url {
-  font-weight: 300;
-  text-decoration: underline;
 }
 
 h1 {
-  font-size: 2.49em;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 h2 {
-  font-size: 2.07em;
+  font-size: 2rem;
+  font-weight: 400;
 }
 h3 {
-  font-size: 1.73em;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 h4 {
-  font-size: 1.44em;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 h5 {
-  font-size: 1.2em;
+  font-size: 0.69rem;
+  font-weight: 400;
 }
-h6 {
-  font-size: 1em;
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
 }
-/* NAV START****************************************************/
-.site-nav {
+
+/* Navigation */
+.largeLinks {
+  display: none;
+}
+
+video {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 1.5em;
+  background-color: #000505;
+  color: #fff;
+  padding: 0 6%;
+  height: 72px;
 }
 
-.nav-name {
-  display: block;
-  width: 100%;
-}
-/* NAV END****************************************************/
-
-/* BUTTONS START****************************************************/
-
-#home #link-button-primary {
-  padding: 1em 0;
-  text-transform: uppercase;
-
-  font-family: inherit;
-  font-size: 1.25em;
-  font-weight: 600;
-  border: none;
-  border: solid 3px var(--tertiary);
-
-  color: var(--primary);
-
+.navLinks {
+  position: absolute;
+  right: 0;
+  height: 92vh;
+  top: 8vh;
   background-color: var(--tertiary);
-  text-align: center;
-}
-
-#home #link-button-secondary {
-  padding: 1em 0;
-  text-transform: uppercase;
-
-  font-family: inherit;
-  font-size: 1.25em;
-  font-weight: 600;
-  border: solid 3px var(--tertiary);
-  color: var(--tertiary);
-  box-sizing: border-box;
-  background-color: none;
-  text-align: center;
-}
-
-/* BUTTONS END****************************************************/
-
-/* MOBILE STYLES 
-|
-|
-|
-|
-|
-V 
-/* GRIDS START  ***************************************************************************/
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1em;
-  max-width: 90vw;
-}
-#resume .grid {
-  row-gap: 2.5em;
-  column-gap: 1em;
-  max-width: 90vw;
-}
-
-/* GRIDS END  ***************************************************************************/
-
-/* HOME PAGE START ****************************************************************/
-
-/* PROFILE PIC ****************************************************************/
-.intro #portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 230px;
-  height: auto;
-  border-radius: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
 }
 
-.intro div:nth-child(1) {
-  grid-column: 4 / span 6;
-  grid-row: 1;
-  width: 100%;
-  text-align: center;
+.navLinks li {
+  padding: 24px;
+  opacity: 0;
 }
-/* MAIN STATEMENT ****************************************************************/
-
-.intro div:nth-child(2) {
-  grid-column: 1/13;
-  grid-row: 2;
-  width: 100%;
+.navLinks li a {
+  font-weight: 400;
+  color: #000505;
 }
 
-#statement {
-  color: var(--secondary);
+.logo p {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+.burger {
+  display: block;
+  cursor: pointer;
+}
+.burger div {
+  width: 32px;
+  height: 2px;
+  background-color: var(--tertiary);
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+.nav-active {
+  transform: translateX(0%);
 }
 
-/* EXPERIENCE BUTTONS ****************************************************************/
-
-.intro div:nth-child(3) {
-  grid-column: 1/13;
-  grid-row: 3;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+@keyframes navlinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.experience-buttons a:nth-child(1) {
-  grid-column: 1/3;
-  grid-row: 1;
-}
-.experience-buttons a:nth-child(2) {
-  grid-column: 3/5;
-  grid-row: 1;
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 18% 6%;
 }
 
-/* SOCIAL ICONS ****************************************************************/
+/* Image and profile */
 
-.links-social-icons {
+.imgProfile {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 2rem;
 }
-.icon-wrapper {
-  padding: 8px;
-  margin-left: 16px;
-  border: 3px solid var(--secondary);
-  border-radius: 100%;
-  max-width: 46px;
-}
-.icon {
-  display: flex;
-  justify-content: center;
-}
-svg {
-  width: 75%;
-
-  fill: var(--tertiary);
-}
-#footer-icons {
-  margin-top: 16px;
-}
-#footer-icon {
-  margin-left: 0;
+#portrait {
+  width: 100%;
+  max-width: 72px;
+  height: auto;
+  border-radius: 8px;
   margin-right: 16px;
+  filter: grayscale(100%);
+  width: 64px;
+  z-index: -1;
 }
-/* HOME PAGE END ****************************************************************/
 
-/* RESUME PAGE START ****************************************************************/
+.greyText {
+  color: #808282;
+}
 
-#resume section {
+/* Hero Message */
+.hero {
+  width: 100%;
+  max-width: 1104px;
+  margin-bottom: 8rem;
+}
+
+#mainText {
+  letter-spacing: 0.02286rem;
+  margin-bottom: 16px;
+}
+
+.profileText {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+#humanGradient {
+  background: var(
+    --Gradient-1,
+    linear-gradient(99deg, #69abfc 37.81%, #4dc1c6 70.79%, #31d891 103.59%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID EXERCISE _____________________________________________________________________*/
+
+/* Case Studies */
+#caseStudyTitle {
+  margin-bottom: 8px;
+}
+
+.caseStudies {
   display: flex;
-  justify-content: center;
+  max-width: 1104px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card Styles */
+.cardContainer {
+  display: grid;
+  gap: 1.5rem;
+  padding: 24px 16px 16px;
+  border: 1px solid var(--secondary);
+  border-radius: 16px;
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-}
-#resume p,
-a,
-li {
-  text-transform: none;
-  font-weight: 200;
-}
-.resume-open-tab {
-  display: flex;
-}
-.resume-open-tab h1 {
-  margin-right: 16px;
-}
-#open-tab {
-  fill: var(--secondary);
-  width: 40%;
-}
-#resume li:not(:last-child) {
-  margin-bottom: 1em;
-}
-
-#resume .experience-points li::before {
-  content: "+ ";
-  color: var(--secondary);
-}
-
-#resume h1,
-h5 {
-  color: var(--secondary);
-}
-
-#resume .resume-header {
-  grid-column: 1 / span 13;
-  grid-row: 1;
-}
-#resume .experience {
-  grid-column: 1 / span 13;
-  grid-row: 2;
-  display: grid;
-  gap: 1.5em;
-}
-.company {
-  display: grid;
-
-  gap: 0.5em;
-}
-
-#resume .university-skills {
-  grid-column: 1 / span 13;
-  grid-row: 3;
-  display: grid;
-  gap: 1em;
-}
-
-#resume .company-range {
-  display: flex;
   justify-content: space-between;
 }
 
-/* MEDIA QUERIES START ****************************************************************/
+.imgWrapper {
+  width: 100%;
+  aspect-ratio: auto 4/3;
+  overflow: hidden;
+  max-height: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border-radius: 8px;
+}
 
-@media (max-width: 376px) {
-  body {
+.projPreview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.homeResultList {
+  list-style-type: none;
+}
+
+.resultIcon {
+  margin-right: 8px;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* In Progress */
+
+#inProg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#warning p {
+  display: flex;
+  align-items: center;
+  background-color: var(--warning);
+  color: var(--primary);
+  border-radius: 100px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+  height: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+#footer {
+  height: 240px;
+  padding: 0 4% 0 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--secondary);
+}
+
+.footerItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+#CenterfooterText {
+  text-align: center;
+}
+
+.emailLink {
+  padding-top: 4px;
+}
+
+.footerIcons {
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Media Query Starts */
+@media (min-width: 360px) {
+  /* h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  } */
+  /* h3 {
+    font-size: 1.375rem;
+    font-weight: 500;
+  } */
+}
+
+@media (min-width: 604px) {
+  #nav {
+    justify-content: space-between;
+  }
+  #links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  #link {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .siteName {
+    display: block;
+  }
+  #mainText {
+    max-width: 80%;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projectTitle {
+    grid-column: span 2;
+  }
+  .imgWrapper {
+    grid-column: span 2;
+  }
+
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+}
+@media (min-width: 724px) {
+  .largeLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .largeLinks li a {
     font-size: 14px;
-    margin: 0;
+    font-weight: 400;
+  }
+  .largeLinks li {
+    list-style: none;
   }
 
-  /* SOCIAL ICONS ****************************************************************/
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+  }
 
-  #top-icons {
+  .navLinks a {
+    text-decoration: none;
+    font-size: 14 px;
+    font-weight: 400;
+  }
+
+  .burger {
     display: none;
   }
-}
 
-@media (min-width: 377px) and (max-width: 576px) {
-  /* Styles for medium devices */
-  body {
-    font-size: 16px;
+  .cardContainer {
+    grid-template-columns: repeat(8, 1fr);
   }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
+  .projectTitle {
+    grid-column: span 8;
   }
-}
-
-@media (min-width: 577px) and (max-width: 767px) {
-  body {
-    font-size: 16px;
-    margin: 0;
+  .description {
+    grid-column: span 3;
   }
-
-  /* SOCIAL ICONS ****************************************************************/
-
-  #footer-icons {
-    display: none;
+  .imgWrapper {
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column: span 3;
   }
 }
+@media (min-width: 900px) {
+  .main-container {
+    margin: 12% 4%;
+  }
+  #mainText {
+    max-width: 70%;
+  }
 
-@media (min-width: 768px) and (max-width: 992px) {
-  /* Styles for large devices */
-  body {
+  .cardContainer {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .projectTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 12;
+  }
+  .description {
+    grid-column: span 5;
+  }
+  .imgWrapper {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column: span 5;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
     font-size: 18px;
+    line-height: 1.5;
   }
 
-  section {
-    margin-top: 12vh;
+  /* h1 {
+    font-size: 3.25rem;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  } */
+  /* h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  } */
+
+  #mainText {
+    max-width: 70%;
+  }
+  .imgWrapper {
+    grid-column: span 8;
+    grid-row: span 2;
+    grid-column-end: 13;
   }
 
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
+  .description {
+    grid-column: span 4;
   }
 
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1/5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-  /* Styles for extra large devices */
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
-  }
-
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1/5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 70vw;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
-  }
-}
-
-@media (min-width: 1201px) and (max-width: 1399px) {
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-  .grid {
-    column-gap: 1.5em;
-  }
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 1 / 5;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-  .intro div:nth-child(2) {
-    grid-column: 5/13;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 5/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 932px;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
-  }
-}
-
-@media (min-width: 1400px) {
-  body {
-    font-size: 20px;
-  }
-  section {
-    margin-top: 12vh;
-  }
-
-  button {
-    padding: 0.5em;
-  }
-
-  .grid {
-    column-gap: 1.5em;
-  }
-  /* PROFILE PIC ****************************************************************/
-
-  .intro div:nth-child(1) {
-    grid-column: 4/6;
-    grid-row: 1;
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 100%;
-  }
-  /* MAIN STATEMENT ****************************************************************/
-
-  .intro div:nth-child(2) {
-    grid-column: 6/10;
-    grid-row: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* EXPERIENCE BUTTONS ****************************************************************/
-
-  .intro div:nth-child(3) {
-    grid-column: 6/13;
-    grid-row: 2;
-    max-width: 400px;
-  }
-
-  /* SOCIAL ICONS ****************************************************************/
-  #footer-icons {
-    display: none;
-  }
-  /* RESUME ****************************************************************/
-
-  #resume {
-    font-size: 16px !important;
-  }
-
-  #resume .grid {
-    border: 1px solid var(--secondary);
-    padding: 64px;
-    border: 3px solid #bdff00;
-    box-shadow: 16px 16px 0px #bdff00;
-    border-radius: 16px;
-    max-width: 932px;
-  }
-
-  #resume .experience {
-    grid-column: 1 / 8;
-    grid-row: 2;
-    display: grid;
-
-    gap: 1.5em;
-  }
-  #resume .university-skills {
-    grid-column: 10 /13;
-    grid-row: 2 / auto;
-    display: grid;
-
-    gap: 1em;
-    height: fit-content;
-  }
-  #resume li:not(:last-child) {
-    margin-bottom: 0.5em;
-  }
-  #resume .company-range {
-    display: block;
-    /* font-size: 1em; */
-    /* justify-content: space-between; */
-  }
-  .company-range h6:nth-child(2) {
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: 0.5em;
+  .results {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column: span 4;
   }
 }

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/dashboards.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/pathAnalysis.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/CaseStudyStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="styles/aboutMe.css" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auryc Dashboards</title>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="index.html">
+        <div class="logo"><p>edgarsanchez.design</p></div>
+      </a>
+      <ul class="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1dTZrP3Z1MeEE2W_4Xoc3k6IKlmgT0_Fl/view?usp=sharing"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                fill="#000505"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@edgarsanchez.design">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_426_3118)">
+                <path
+                  d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                  fill="#000505"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_426_3118">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(4 4)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <ul class="largeLinks">
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1dTZrP3Z1MeEE2W_4Xoc3k6IKlmgT0_Fl/view?usp=sharing"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                  fill="#FFF"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@edgarsanchez.design">
+              <div class="emailLink">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_426_3118)">
+                    <path
+                      d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                      fill="#FFF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_426_3118">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(4 4)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main>
+      <section class="main-container">
+        <div class="caseStudyContent">
+          <div class="caseStudyHero">
+            <div class="caseStudyTitleDescription">
+              <object
+                data="assets/SVG/AurycLogo.svg"
+                type="image/svg+xml"
+              ></object>
+              <h1 id="mainText">Auryc Dashboards</h1>
+              <h3 class="profileText">
+                Empowering teams with the flexibility to tailor their data
+                analysis to their specific workflows and decision-making
+                processes.
+              </h3>
+            </div>
+            <div class="PAcaseHeroImg">
+              <div>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/CaseHeroImgBG.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="vidContainer">
+                <video
+                  class="heroVid"
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/Dashboards.mp4"
+                ></video>
+              </div>
+            </div>
+            <!-- <div class="cardGroup" id="resultGroup">
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/attach_money.svg" type=""></object>
+                </div>
+                <p>ARR increase of 20% from previous quarter.</p>
+              </div>
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/people_alt.svg" type=""></object>
+                </div>
+                <p>Adopted by 78% of accounts.</p>
+              </div>
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/article.svg" type=""></object>
+                </div>
+                <p>Expansion rate of 15% on overall contract value.</p>
+              </div>
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/insights.svg" type=""></object>
+                </div>
+                <p>Increased retention rate to 92%.</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="AboutSection">
+            <h2>About</h2>
+            <p>
+              Auryc is a product analytics platform that helps product teams
+              understand user experiences, product performance, and prioritize
+              improvements. It offers session replay, analytics, and voice of
+              customer feedback.
+            </p>
+            <div class="imgWrapper-topMargin">
+              <img
+                id="aboutImg"
+                src="assets/PathAnalysisCaseStudyImgs/aboutImg.png"
+                alt=""
+              />
+            </div>
+            <div class="projectDetails marginTopcardGroup">
+              <div class="singleDetail">
+                <h4>Role</h4>
+                <ul>
+                  <li>Lead product designer</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Timeline</h4>
+                <ul>
+                  <li>Q1-Q2 2021</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Contribution</h4>
+                <ul>
+                  <li>Research</li>
+                  <li>Scoping & prioritization</li>
+                  <li>Design</li>
+                  <li>QA</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Team</h4>
+                <ul>
+                  <li>1 Product manager</li>
+                  <li>2 Developers</li>
+                  <li>1 Backend engineer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>The Problem</h2>
+
+            <p>
+              Auryc's out of the box dashboards, while insightful and convenient
+              for jumpstarting data analysis, suffered from a rough UX and
+              limitations.
+            </p>
+            <div class="version-ImageCardGroup reverseCardAndImage" id="">
+              <div class="labelAndDesign">
+                <div class="lookerDashboardImgGroup">
+                  <div>
+                    <img
+                      src="assets/DashboardCaseImages/LookerDashboard_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/DashboardCaseImages/LookerDashboard_2.jpg"
+                      alt=""
+                    />
+                    <img
+                      src="assets/DashboardCaseImages/LookerDashboard_3.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="basicCard">
+                <!-- <h3>Key Findings</h3> -->
+
+                <ul class="listItemPadding">
+                  <li>
+                    Dashboards were difficult to edit, users depended on
+                    customer support for any changes.
+                  </li>
+                  <li>
+                    Analysis reports created in other areas of Auryc were not
+                    supported, these reports had to be viewed individually.
+                  </li>
+                  <li>
+                    Complex charts and tables made it difficult to digest the
+                    important trends and patterns.
+                  </li>
+                  <li>
+                    Dashboard UI was not customizable and was not consistent
+                    with the rest of the platform creating a patched user
+                    experience in the platform.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>First Steps</h2>
+            <p>
+              With the current customer pain points in mind I decided to take on
+              the challenge and began working on a prototype to establish the
+              vision of what Auryc dashboards could look like and the value they
+              could provide to our customers and business.
+            </p>
+
+            <div class="imgWrapper-topMargin">
+              <video
+                autoplay=""
+                muted=""
+                loop=""
+                src="assets/Vid/1stProtoDashboard.mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Phase 1</h2>
+
+            <p>
+              We knew we didn’t have to reinvent the wheel when it came to
+              dashboards. Through research and competitive analysis we gathered
+              the minimum requirements that would allow us to ship an MVP.
+            </p>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <div>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="assets/Vid/Phase1Dashboard.mp4"
+                  ></video>
+                </div>
+              </div>
+              <div class="basicCard">
+                <h3>Laying the Foundation</h3>
+                <p>
+                  In order to reduce implementation and receive feedback before
+                  moving forward, Phase 1 would only allow customers to build
+                  personalized dashboards based on top reports from out of the
+                  box dashboards:
+                </p>
+                <ul class="listItemPadding">
+                  <li>Revenue</li>
+                  <li>Performance</li>
+                  <li>Optimization</li>
+                  <li>Customer feedback</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Phase 2</h2>
+
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <div>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="assets/Vid/Dashboards.mp4"
+                  ></video>
+                </div>
+              </div>
+              <div class="basicCard">
+                <h3>Introducing Custom Reports</h3>
+                <p>
+                  Phase 2 of dashboards would support all types of reports
+                  created within the platform.
+                </p>
+                <h3 id="ConsTopPadding">Nice to Have</h3>
+                <ul class="listItemPadding">
+                  <li>Dashboard alerts based on threshold - email/slack</li>
+                  <li>Scheduled dashboards - email/slack</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Chart Audit</h2>
+            <p>
+              In order to enhance report legibility and give customers the the
+              ability to establish hierarchy within their dashboards we wanted
+              to implement the ability to expand reports across the entire grid
+              row. In order to ensure this would be supported by all reports, I
+              performed an audit of the types of charts we offered through out
+              the entire platform then rebuilt them to work in 3 different
+              sizes.
+            </p>
+
+            <div class="imgWrapper-topMargin" id="dashboardAuditImgs">
+              <img src="assets/DashboardCaseImages/Audit 1.jpg" alt="" />
+              <img src="assets/DashboardCaseImages/Audit 2.jpg" alt="" />
+              <img src="assets/DashboardCaseImages/Audit 3.jpg" alt="" />
+              <img src="assets/DashboardCaseImages/Audit 4.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="caseSection">
+            <h2>Editing Dashboards</h2>
+
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/DashboardCaseImages/Editing Dashboards.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="caseSection">
+            <h2>Adding Reports</h2>
+
+            <div class="imgWrapper-topMargin">
+              <img src="assets/DashboardCaseImages/Adding Reports.jpg" alt="" />
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Dashboard w/ Filter</h2>
+
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/DashboardCaseImages/Dashboard Filter.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Sharing Dashboards</h2>
+
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/DashboardCaseImages/Sharing Dashboards.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footerItems">
+        <div>
+          <p class="greyText" id="CenterfooterText">
+            © 2023 Edgar Sanchez<br />Designed and coded by me.
+          </p>
+          <p class="greyText"></p>
+        </div>
+        <div>
+          <p id="CenterfooterText">
+            Have a question, feedback or want to connect?
+          </p>
+        </div>
+        <div class="footerIcons">
+          <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+          <a href="mailto:hello@edgarsanchez.design">
+            <div class="emailLink">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_426_3118)">
+                  <path
+                    d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                    fill="#fff"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_426_3118">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(4 4)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

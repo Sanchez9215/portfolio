@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/general.css" />
+    <!-- <link rel="stylesheet" href="styles/pathAnalysis.css" /> -->
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/sessionReplay.css" />
+    <link rel="stylesheet" href="styles/CaseStudyStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="styles/aboutMe.css" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heap Session Replay</title>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="index.html">
+        <div class="logo"><p>edgarsanchez.design</p></div>
+      </a>
+      <ul class="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1dTZrP3Z1MeEE2W_4Xoc3k6IKlmgT0_Fl/view?usp=sharing"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                fill="#000505"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@edgarsanchez.design">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_426_3118)">
+                <path
+                  d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                  fill="#000505"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_426_3118">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(4 4)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <ul class="largeLinks">
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1dTZrP3Z1MeEE2W_4Xoc3k6IKlmgT0_Fl/view?usp=sharing"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                  fill="#FFF"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@edgarsanchez.design">
+              <div class="emailLink">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_426_3118)">
+                    <path
+                      d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                      fill="#FFF"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_426_3118">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(4 4)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main>
+      <section class="main-container">
+        <div class="caseStudyContent">
+          <div class="caseStudyHero">
+            <div class="caseStudyTitleDescription">
+              <object
+                data="assets/SVG/HeapLogo.svg"
+                type="image/svg+xml"
+              ></object>
+              <h1 id="mainText">Session Replay: Support Teams</h1>
+              <h3 class="profileText">
+                Helping support teams understand customer behavior and identify
+                root causes through session replay.
+              </h3>
+            </div>
+            <div class="SRcaseHeroImg">
+              <div>
+                <img
+                  src="assets/PathAnalysisCaseStudyImgs/CaseHeroImgBG.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="vidContainer">
+                <video
+                  class="heroVid"
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/FinalPlayer(Compressed).mp4"
+                ></video>
+              </div>
+            </div>
+            <div class="cardGroup" id="resultGroup">
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/attach_money.svg" type=""></object>
+                </div>
+                <p>Key factor in closing deals for replay tool replacement.</p>
+              </div>
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/insights.svg" type=""></object>
+                </div>
+                <p>10% increase in session replay viewing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="AboutSection">
+            <h2>About</h2>
+            <p>
+              Heap is a digital insights platform that helps companies
+              understand their users' digital journeys and identify friction
+              points and opportunities.
+            </p>
+            <div class="imgWrapper-topMargin">
+              <img
+                id="aboutImg"
+                src="assets/SessionReplayCaseStudyImgs/heapAboutImg.png"
+                alt=""
+              />
+            </div>
+            <div class="projectDetails marginTopcardGroup">
+              <div class="singleDetail">
+                <h4>Role</h4>
+                <ul>
+                  <li>Lead product designer</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Timeline</h4>
+                <ul>
+                  <li>Q4 2022</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Contribution</h4>
+                <ul>
+                  <li>Research</li>
+                  <li>Scoping & prioritization</li>
+                  <li>Design</li>
+                  <li>QA</li>
+                </ul>
+              </div>
+              <div class="singleDetail">
+                <h4>Team</h4>
+                <ul>
+                  <li>1 Product manager</li>
+                  <li>1 Staff product designer</li>
+                  <li>1 Developer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="caseSection">
+            <h2>Background</h2>
+            <p>
+              Heap was in its early stages of developing a native session replay
+              tool.
+            </p>
+
+            <div class="version-ImageDoubleCardGroup" id="cardImageReverse">
+              <div class="labelAndDesign">
+                <img
+                  src="assets/SessionReplayCaseStudyImgs/EarlyHeapPlayer.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="cardGroup" id="cardcolumngroup">
+                <div class="basicCard">
+                  <h3>The Problem</h3>
+                  <p>
+                    Heap’s session player lacked crucial information required
+                    for support teams to easily transition into analysis,
+                    troubleshoot issues, and assess impact.
+                  </p>
+                </div>
+                <div class="basicCard">
+                  <h3>What's session replay?</h3>
+                  <p>
+                    Session replay allows you to troubleshoot issues and improve
+                    the user experience by allowing you to watch a video of
+                    exactly what a user did on your website or application.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection" id="opportunitySection">
+            <h2>Opportunity</h2>
+            <h2 id="oppQuestion">
+              <em>
+                How can session replay empower support teams to better
+                understand customer behavior and pinpoint problem roots?
+              </em>
+            </h2>
+          </div>
+          <div class="caseSection">
+            <h2>Past Experience</h2>
+
+            <p>
+              My experience at Auryc and past market research gave me a deep
+              understanding of the value of session replay for support teams. I
+              saw firsthand how important it is to provide more context than
+              just the recording, which helped me arrive at some quick
+              solutions.
+            </p>
+            <div class="version-ImageCardGroup">
+              <div class="labelAndDesign">
+                <div>
+                  <img
+                    src="assets/SessionReplayCaseStudyImgs/AurycPlayer.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="basicCard">
+                <h3>Proposed Enhancements</h3>
+
+                <ul id="svgNumberList">
+                  <li>
+                    <object data="assets/SVG/1.svg" type=""></object>Page URL
+                  </li>
+                  <li>
+                    <object data="assets/SVG/2.svg" type=""></object>Session
+                    Details
+                  </li>
+                  <li>
+                    <object data="assets/SVG/3.svg" type=""></object>Event list
+                    (Activity log)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Solution Validation</h2>
+            <p>
+              To validate the possible solutions, I interviewed 6 product
+              managers who walked me through their last experience with session
+              replay. I then aligned my findings with the possible solutions.
+            </p>
+            <div class="QuotecardGroup marginTopcardGroup">
+              <div class="QuoteCard">
+                <div>
+                  <h3>
+                    Support teams need a way to easily access a customer's past
+                    sessions.
+                  </h3>
+                </div>
+                <div>
+                  <p class="greyText">
+                    <i>
+                      “I knew we were capturing their email when they created an
+                      account, so I watched them log in and from there was able
+                      to find past sessions”
+                    </i>
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    Support teams can save time and effort by accessing user
+                    history from the replay. This would let them quickly find
+                    other sessions from the same user.
+                  </p>
+                </div>
+              </div>
+              <div class="QuoteCard">
+                <div>
+                  <h3>
+                    Support teams need a way to intuitively search through a
+                    session for specific activity.
+                  </h3>
+                </div>
+                <div>
+                  <p class="greyText">
+                    <i>
+                      “...I either scrub through the session or I sit back,
+                      speed up the session and keep an eye out for when they
+                      reach the page I am looking for.”
+                    </i>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    A search bar that allows support teams to filter through
+                    actions and find specific activity would save them time and
+                    effort when resolving cases.
+                  </p>
+                </div>
+              </div>
+              <div class="QuoteCard">
+                <div>
+                  <h3>
+                    Lack of session details leaves support teams in the dark
+                    when investigating an issue.
+                  </h3>
+                </div>
+                <div>
+                  <p class="greyText">
+                    <i>
+                      “I noticed the customer was in Europe because of the login
+                      UI... that’s when I started watching other sessions from
+                      that location...I realized the problem was only affecting
+                      our customers in Europe.”
+                    </i>
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    Session details could give support teams a starting point
+                    for their investigation when looking to quantify the problem
+                    without relying on the replay content.
+                  </p>
+                </div>
+              </div>
+
+              <div class="QuoteCard">
+                <div>
+                  <h3>
+                    Support teams need to have a log of user actions in case
+                    playback isn't clear.
+                  </h3>
+                </div>
+                <div>
+                  <p class="greyText">
+                    <i>
+                      “Sometimes its difficult to keep track of what the
+                      customer is doing specially because the cursor can
+                      sometimes be off from the actual element being clicked...”
+                    </i>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    The event list is like the script to a movie. When something
+                    is not clear, support teams can refer to the log to identify
+                    what happened.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Sketching Solutions</h2>
+            <p>
+              I started exploring solutions by sketching the different feature
+              components we could add to the player, keeping research insights
+              top of mind. This allowed me to share my ideas early on with
+              stakeholders and the product team, so that we could get feedback
+              and ensure we were moving in the right direction.
+            </p>
+
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/SessionReplayCaseStudyImgs/InitialSketches.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Constraints</h2>
+            <p>
+              We received feedback that the event list was limited in what it
+              could show due to session replay still being in its early stages.
+            </p>
+            <p>
+              Auryc data did not yet match the data in Heap, which meant that we
+              could not display defined events. For the time being, we could
+              only show URL paths, JS errors, and text that was clicked on.
+            </p>
+            <div class="marginTopcardGroup alwaysStackedCards">
+              <div class="basicCard">
+                <h3>The Challenge</h3>
+                <p>
+                  We need to display actions in the player in a way that is both
+                  flexible and informative. The display should distinguish
+                  actions from defined events so that users can understand the
+                  limitations of the player and avoid confusion. Once the data
+                  matches defined events, other analysis features can be easily
+                  introduced.
+                </p>
+              </div>
+              <div class="basicCard">
+                <h3>What are defined events?</h3>
+
+                <p>
+                  Defined events are user actions within a product that have
+                  been named and tracked by your team to understand user
+                  behavior and identify trends. In Heap defined events are the
+                  building blocks to any type of analysis.
+                </p>
+                <div class="imgInCardGroup">
+                  <div>
+                    <img
+                      src="assets/SessionReplayCaseStudyImgs/eventsInHeap_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/SessionReplayCaseStudyImgs/eventsInHeap_2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/SessionReplayCaseStudyImgs/eventsInHeap_3.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Wireframes</h2>
+            <p>
+              I started by sketching out more detailed version of the solutions
+              I was proposing. I wanted to get everything on paper so I could
+              share with stake holders and get approval before continuing.
+            </p>
+
+            <div class="wireframeImages">
+              <div>
+                <img
+                  src="assets/SessionReplayCaseStudyImgs/HeapWireFrame1.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="assets/SessionReplayCaseStudyImgs/HeapWireFrame2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>First Prototype</h2>
+            <p>
+              I created a quick prototype for the design team and other product
+              teams to interact with and provide feedback. The majority of the
+              feedback I received revolved around the event list not appearing
+              interactive at first glance.
+            </p>
+
+            <div class="imgGroupNoLabels">
+              <div id="feedbackVidWrapper">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  id="feedbackVid"
+                  src="assets/Vid/FeedbackMock.mp4"
+                ></video>
+                <img
+                  id="feedbackOverLay"
+                  src="assets/SessionReplayCaseStudyImgs/TeamFeedBack.png"
+                  alt=""
+                />
+              </div>
+              <!-- <div class="vidContainer">
+             
+              </div> -->
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Design Iterations</h2>
+            <div class="imgWithCardGroup">
+              <div class="labelAndDesign">
+                <p id="version">Chunky Event List</p>
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/HeapChunkyIteration.mp4"
+                ></video>
+              </div>
+
+              <div class="Iteration-CustomCardGroup">
+                <div class="basicCard">
+                  <h3>Chunky Event List</h3>
+                  <p>
+                    Inspired by a new button style, the "chunky" event list
+                    design, emphasized clickability through a solid drop shadow.
+                  </p>
+                </div>
+                <div class="basicCard">
+                  <h3>Decision</h3>
+                  <p>
+                    Internal testing showed that users interpreted the elements
+                    as clickable, but it was not clear that each element had two
+                    actions: going to a specific moment in the session or
+                    expanding action details.
+                  </p>
+                  <p>
+                    Additionally, we were not committed to the "chunky" approach
+                    in other areas of the platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="imgWithCardGroup">
+              <div class="labelAndDesign">
+                <p id="version">Two-Piece Event List</p>
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="assets/Vid/2PieceEventList.mp4"
+                ></video>
+              </div>
+
+              <div class="Iteration-CustomCardGroup">
+                <div class="basicCard">
+                  <h3>Two-Piece Event List</h3>
+                  <p>
+                    For enhanced action clarity, the two-piece event list
+                    employed a border and subtle drop-shadow on hover for each
+                    action. Additionally, highlighting the current event during
+                    playback further improved action clarity.
+                  </p>
+                </div>
+                <div class="basicCard">
+                  <h3>Decision</h3>
+                  <p>
+                    We chose the two-piece event list due to its effectiveness
+                    separating session navigation and the option to view more
+                    information.
+                  </p>
+                  <p>
+                    Icons were removed to avoid defined event association. The
+                    URL dropdown and "Open in New Tab" options were postponed
+                    for further testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection" id="removeTopMargin">
+            <h2>Other Explorations</h2>
+            <div class="imgWithCardGroup">
+              <div class="imgGroupNoLabels">
+                <div class="labelAndDesign">
+                  <p id="version">Two-Piece w/ Timeline</p>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="assets/Vid/TimeLine2Piece.mp4"
+                  ></video>
+                </div>
+                <div class="labelAndDesign">
+                  <p id="version">Chunky w/ Timeline</p>
+                  <div id="eventListCrop">
+                    <video
+                      autoplay
+                      muted
+                      loop
+                      src="assets/Vid/TimeLineChunk.mp4"
+                    ></video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Iteration-CustomCardGroup">
+                <div class="basicCard">
+                  <h3>Event Lists w/ Timeline</h3>
+                  <p>
+                    Designs for an event lists with a vertical timeline were
+                    created based on leadership feedback, the goal was to
+                    establish a stronger connection between the elements in the
+                    event list and what was happening in the session.
+                  </p>
+                </div>
+                <div class="basicCard">
+                  <h3>Decision</h3>
+                  <p>
+                    We agreed that the timeline was helpful, but not necessary,
+                    as the animation of the event list could also provide the
+                    same affordance. Therefore, we dropped the idea and did not
+                    include it in the MVP.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Final Prototype</h2>
+            <p>
+              Once the team agreed to move forward with the two-piece event
+              list, I created a final prototype that implemented all the
+              feedback I had collected thus far. I reviewed once more, walked
+              engineering through all the different interactions in detail, and
+              development began.
+            </p>
+
+            <div class="imgWrapper-topMargin">
+              <video
+                autoplay
+                muted
+                loop
+                src="assets/Vid/HEAPFINALPROTO.mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>In Production</h2>
+            <p>
+              Once we were able to start testing engineering's progress, we held
+              a bug bash meeting to stress test the player and log any unusual
+              behavior. After addressing high priority issues, we moved on to
+              general availability.
+            </p>
+
+            <div class="imgWrapper-topMargin">
+              <video
+                autoplay
+                muted
+                loop
+                src="assets/Vid/FinalPlayer(Compressed).mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="caseSection">
+            <h2>Results</h2>
+            <p>
+              The new player was successfully launched in September 2022. In the
+              following months, there was a spike in session replay usage, and
+              we saw an increase in customers switching to us from their current
+              session replay tool.
+            </p>
+            <div class="cardGroup marginTopcardGroup" id="resultGroup">
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/attach_money.svg" type=""></object>
+                </div>
+                <p>
+                  New feature helped close deals for replay tool replacement.
+                </p>
+              </div>
+              <div class="iconCard">
+                <div>
+                  <object data="assets/SVG/insights.svg" type=""></object>
+                </div>
+                <p>Contributed to a 10% increase in session replay viewing.</p>
+              </div>
+            </div>
+            <div class="labelAndDesign">
+              <p id="version">Heap on Heap</p>
+              <img
+                src="assets/SessionReplayCaseStudyImgs/Result chart.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="caseSection">
+            <h2>Release Announcement</h2>
+
+            <div class="imgWrapper-topMargin">
+              <img
+                src="assets/SessionReplayCaseStudyImgs/ReleaseNews.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="caseSection">
+            <h2>Reflection</h2>
+            <p>
+              I was excited to take on this project as my first impactful
+              contribution to the platform.
+            </p>
+            <p>
+              Despite the chaotic environment of an acquisition, I was able to
+              quickly adapt and integrate into a new team, adopt its dynamics
+              and build strong relationships through consistent communication,
+              proactivity, and welcoming feedback and new perspectives, all
+              while remaining positive about the challenges ahead.
+            </p>
+            <div class="cardGroup marginTopcardGroup">
+              <div class="basicCard">
+                <h3>What would I do different?</h3>
+                <p>
+                  I believe that I could have expedited the decision-making
+                  process and brought these new features to market faster by
+                  presenting Auryc customer testimonials and data that backed up
+                  the success of these features in the Auryc player to Heap
+                  stakeholders.
+                </p>
+                <p>
+                  Unfortunately, it was difficult to gather this information
+                  amidst Auryc's integration into Heap.
+                </p>
+              </div>
+              <div class="basicCard">
+                <h3>What Went Well</h3>
+
+                <p>
+                  It was a great learning experience to be introduced to a
+                  different collaboration process at Heap. Processes vary
+                  depending on the company's size and goals, so it was
+                  interesting to see how things are done at a larger scale.
+                </p>
+                <p>
+                  I was also able to work with a design team for the first time,
+                  which was a new experience for me. I had only worked with one
+                  other designer previously, so hearing from 10 other talented
+                  designers and getting their feedback really opened my eyes to
+                  different ways of thinking about solutions.
+                </p>
+                <p>
+                  Everyone has their own approach, and I learned a lot from
+                  everyone's reasoning and decision-making during the design
+                  workshops I brought this project into.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footerItems">
+        <div>
+          <p class="greyText" id="CenterfooterText">
+            © 2023 Edgar Sanchez<br />Designed and coded by me.
+          </p>
+          <p class="greyText"></p>
+        </div>
+        <div>
+          <p id="CenterfooterText">
+            Have a question, feedback or want to connect?
+          </p>
+        </div>
+        <div class="footerIcons">
+          <a href="https://www.linkedin.com/in/edgar-sanchez-a19b53131/">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.4777 26H6.33036V12.6473H10.4777V26ZM8.40179 10.8259C7.07589 10.8259 6 9.72768 6 8.40179C6 7.76479 6.25304 7.15389 6.70347 6.70347C7.15389 6.25304 7.76479 6 8.40179 6C9.03878 6 9.64968 6.25304 10.1001 6.70347C10.5505 7.15389 10.8036 7.76479 10.8036 8.40179C10.8036 9.72768 9.72768 10.8259 8.40179 10.8259ZM25.9955 26H21.8571V19.5C21.8571 17.9509 21.8259 15.9643 19.7009 15.9643C17.5446 15.9643 17.2143 17.6473 17.2143 19.3884V26H13.0714V12.6473H17.0491V14.4688H17.1071C17.6607 13.4196 19.0134 12.3125 21.0313 12.3125C25.2277 12.3125 26 15.0759 26 18.6652V26H25.9955Z"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+          <a href="mailto:hello@edgarsanchez.design">
+            <div class="emailLink">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_426_3118)">
+                  <path
+                    d="M24 8H8C6.9 8 6.01 8.9 6.01 10L6 22C6 23.1 6.9 24 8 24H24C25.1 24 26 23.1 26 22V10C26 8.9 25.1 8 24 8ZM24 12L16 17L8 12V10L16 15L24 10V12Z"
+                    fill="#fff"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_426_3118">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(4 4)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
