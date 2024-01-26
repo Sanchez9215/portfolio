@@ -252,8 +252,19 @@ nav {
   display: grid;
   gap: 1.5rem;
   padding: 24px 16px 16px;
-  border: 1px solid var(--secondary);
+
   border-radius: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+
+  background: radial-gradient(
+      87.29% 87.29% at 50% 100.24%,
+      rgba(80, 86, 115, 0.1) 0%,
+      rgba(0, 7, 22, 0) 100%
+    ),
+    #000505;
+
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.25),
+    0px -0.5px 0px 0px rgba(255, 255, 255, 0.1);
 }
 
 .projectTitle {
