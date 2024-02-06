@@ -114,7 +114,7 @@ nav {
 .navLinks {
   position: absolute;
   right: 0;
-  height: 92vh;
+  height: 100vh;
   top: 8vh;
   background-color: var(--tertiary);
   display: flex;
@@ -123,6 +123,7 @@ nav {
   width: 100%;
   transform: translateX(100%);
   transition: transform 0.5s ease-in;
+  z-index: 1;
 }
 
 .navLinks li {
@@ -233,6 +234,69 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
+.heroButton {
+  display: inline-block;
+  font-size: 1.125rem;
+
+  font-weight: 300;
+
+  margin-top: 32px;
+  border-radius: 16px;
+  color: white;
+
+  position: relative;
+  padding: 1px;
+  background: var(
+    --Gradient-1,
+    linear-gradient(99deg, #69abfc 37.81%, #4dc1c6 70.79%, #31d891 103.59%)
+  );
+
+  box-shadow: 0px 4px 160px 0px rgba(0, 0, 0, 0.05),
+    0px -0.5px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.innerButton {
+  border-radius: 15px;
+  background: radial-gradient(
+      87.29% 87.29% at 50% 100.24%,
+      rgba(187, 210, 255, 0.05) 0%,
+      rgba(0, 7, 22, 0) 100%
+    ),
+    #000505;
+
+  padding: 1rem 1.5rem;
+}
+
+.innerButton::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  padding: 1px;
+  border-radius: 16px;
+  background: radial-gradient(
+      168.2% 168.2% at 50% 100.24%,
+      rgba(80, 86, 115, 0.35) 0%,
+      rgba(0, 7, 22, 0) 100%
+    ),
+    #000505;
+
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.25),
+    0px -0.5px 0px 0px rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.innerButton:hover::before {
+  opacity: 1;
+}
+
+.innerButton > * {
+  position: relative;
+}
+
 /* GRID EXERCISE _____________________________________________________________________*/
 
 /* Case Studies */
@@ -245,6 +309,7 @@ nav {
   max-width: 1104px;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 7.5rem;
 }
 
 /* Card Styles */
@@ -265,7 +330,6 @@ nav {
   box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.25),
     0px -0.5px 0px 0px rgba(255, 255, 255, 0.1);
   position: relative;
-  z-index: -1;
 }
 .cardContainer::before {
   content: "";
@@ -357,6 +421,14 @@ nav {
   height: 12px;
   line-height: 12px;
   font-weight: 500;
+}
+#homePhilNoBMargin {
+  margin-bottom: 3.5rem;
+}
+
+.bottomCTA {
+  display: flex;
+  justify-content: center;
 }
 
 #footer {
